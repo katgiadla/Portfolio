@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="402.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interpolations.LagrangeController">
+   <children>
+      <Button fx:id="argButtn" layoutX="61.0" layoutY="360.0" mnemonicParsing="false" onAction="#enterArguments" text="Argumenty" />
+      <Button fx:id="valButton" layoutX="446.0" layoutY="360.0" mnemonicParsing="false" onAction="#enterValues" text="Wartosci" />
+      <TextArea fx:id="argArea" layoutX="14.0" layoutY="309.0" prefHeight="38.0" prefWidth="155.0" />
+      <TextArea fx:id="valArea" layoutX="399.0" layoutY="309.0" prefHeight="38.0" prefWidth="155.0" />
+      <Label layoutX="113.0" layoutY="219.0" text="Argumenty i wartosci wg wzoru ponizej. W srodku tylko liczba." />
+      <Label layoutX="72.0" layoutY="278.0" text="0/1/2/3" />
+      <TextArea fx:id="resultArea" layoutX="32.0" layoutY="60.0" prefHeight="152.0" prefWidth="540.0" editable="false"/>
+      <Button fx:id="calculateButton" layoutX="254.0" layoutY="360.0" mnemonicParsing="false" onAction="#enterResultArg" text="Oblicz" />
+      <TextArea fx:id="inputResultArguement" layoutX="194.0" layoutY="309.0" prefHeight="38.0" prefWidth="169.0" />
+      <Label layoutX="457.0" layoutY="287.0" text="0/1/2/3" />
+   </children>
+</AnchorPane>

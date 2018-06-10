@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="301.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="differentials.HeunController">
+   <children>
+      <TextArea fx:id="HeunResultArea" editable="false" layoutX="502.0" layoutY="14.0" prefHeight="198.0" prefWidth="199.0" />
+      <TextArea layoutX="22.0" layoutY="100.0" prefHeight="38.0" prefWidth="146.0" fx:id="x0by0hArea" />
+      <Label layoutX="33.0" layoutY="74.0" text="Podaj x0, b, y0, h wg &quot;,&quot;" />
+      <Button layoutX="74.0" layoutY="158.0" mnemonicParsing="false" onAction="#sendingX0BY0H" text="Send" fx:id="x0y0bhButton" />
+      <Button fx:id="fxySend" layoutX="245.0" layoutY="158.0" mnemonicParsing="false" onAction="#sendingXYString" text="Send" />
+      <TextArea layoutX="193.0" layoutY="103.0" prefHeight="38.0" prefWidth="146.0" fx:id="xyArea" />
+      <Label layoutX="194.0" layoutY="14.0" text="Podaj f(x, y) w postaci 0,0,0/0,0,0" />
+      <Label layoutX="194.0" layoutY="40.0" text="gdzie wartosci to x/y od st 0 do max" />
+      <Label layoutX="194.0" layoutY="65.0" text="Jesli nie chcesz x albo y daj - np. -/2,3" />
+      <Button fx:id="calculateButton" layoutX="386.0" layoutY="158.0" mnemonicParsing="false" onAction="#calculatingHeun" text="Oblicz" />
+   </children>
+</AnchorPane>

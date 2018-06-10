@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interpolations.PolynomalController">
+   <children>
+      <TextField id="xTxt" layoutX="241.0" layoutY="66.0" prefHeight="26.0" prefWidth="67.0" fx:id="xTxt" />
+      <TextField id="yTxt" fx:id="yTxt" layoutX="69.0" layoutY="66.0" prefHeight="26.0" prefWidth="67.0" />
+      <Button id="reultBtn" fx:id="reultBtn" layoutX="141.0" layoutY="109.0" mnemonicParsing="false" onAction="#showResult" prefHeight="25.0" prefWidth="100.0" text="Oblicz" />
+      <TextArea id="resultTxt" fx:id="resultTxt" layoutX="382.0" layoutY="1.0" prefHeight="292.0" prefWidth="200.0" />
+      <Label layoutX="218.0" layoutY="41.0" text="wstaw wartosci wg &quot;,&quot;" />
+      <Label layoutX="39.0" layoutY="41.0" text="wstaw argumenty wg &quot;,&quot;" />
+   </children>
+</AnchorPane>
