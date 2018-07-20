@@ -1,0 +1,6 @@
+Task polega na przeanalizowaniu kroków niezbędnych do zaaplikowania na ofertę pracy, która nie odsyła nas na zewnętrzną stronę. Dla zadanego adresu oferty, serwis powinien wysłać konfigurowalną wiadomości oraz załączyć plik.
+
+Tip: plik może pochodzić z konta od danego providera, więc niekonieczie trzeba uploadować plik - być może wystarczy odpowiednio skonstruować zapytanie.
+
+ma captche
+
