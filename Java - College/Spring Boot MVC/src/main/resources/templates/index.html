@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<table>
+
+    <tr>
+        <h3>Name</h3>
+        <h3>Size</h3>
+        <h3>Resolution</h3>
+        <h3>Data</h3>
+    </tr>
+    <tr th:each="image : ${images}">
+        <td th:text="${image.name}">PicOne</td>
+        <td th:text="${image.size}">200kb</td>
+        <td th:text="${image.resolution}"> 20 x 20</td>
+        <td th:text="${image.date}"> 09.09.2018</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
