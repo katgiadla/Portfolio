@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ALL IMAGES</title>
+    <link rel="stylesheet" th:href="@{/assets/allPictures.css}"/>
+</head>
+<body>
+<h1>Images list</h1>
+<table>
+
+    <tr th:each="image : ${images}">
+        <img th:src="@{'/images/' + ${image.name}}" th:utext="${ '<br /> name: ' + image.name + '  <br /> size: ' + image.size + '  <br /> res:  '
+         + image.resolution + '  <br /> create date: ' + image.created} + ' <br />  <br /> '"/>
+        <td th:utext="${'<br />'}"/>
+    </tr>
+
+</table>
+</body>
+</html>

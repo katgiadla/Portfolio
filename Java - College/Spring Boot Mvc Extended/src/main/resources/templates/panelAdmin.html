@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ALL IMAGES</title>
+    <link rel="stylesheet" th:href="@{/assets/admin.css}"/>
+</head>
+<body>
+<h1>Succesfully logged in!</h1>
+<p>Welcome admin</p>
+<h2>Wonderful day</h2>
+<p> paragraph</p>
+<adminStyle>Adminstyle</adminStyle>
+
+                        <!--My upload button-->
+<form th:action="@{/gallery/upload}" method="post" enctype="multipart/form-data">
+    <input type="file" name="files" multiple/>
+    <input type="submit" id="buttonLogin" name="submit" value="Upload Files"/>
+</form>
+
+<form th:action="@{/gallery/logout}" method="post">
+    <input type="submit" id="buttonLogout" name="submit" value="logout"/>
+</form>
+
+<table>
+    <tr th:each="image : ${images}">
+        <form th:action="@{/gallery/panel}" method="post">
+            <input type="hidden" name="image.name" th:value="${image.name}"/>
+            <input type="submit" name="submit" value="delete"/>
+        </form>
+        <img th:src="@{'/images/' + ${image.name}}" th:utext="${
+        '<br /> name: ' + image.name +
+        '<br /> size: ' + image.size +
+        '<br /> res:  ' + image.resolution +
+        '<br /> create date: ' + image.created} +
+        '<br />  <br /> '"
+        />
+    </tr>
+</table>
+
+</body>
+</html>

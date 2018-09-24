@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ALL IMAGES</title>
+    <link rel="stylesheet" th:href="@{/assets/allPictures.css}"/>
+</head>
+<body>
+<h1>Images list</h1>
+
+
+<form th:action="@{/gallery/login}" method="post">
+    <input type="text" id="adminLogin" name="adminLogin"/>
+    <input type="text" id="adminPassword" name="adminPassword"/>
+    <input type="submit" id="buttonLogin" name="submit" value="login"/>
+</form>
+
+<!--<form th:action="@{/gallery/logout}" method="post">
+    <input type="submit" id="buttonLogout" name="submit" value="logout"/>
+</form>-->
+
+<table>
+    <tr th:each="image : ${images}">
+        <img th:src="@{'/images/' + ${image.name}}" th:utext="${
+        '<br /> name: ' + image.name +
+        '<br /> size: ' + image.size +
+        '<br /> res:  ' + image.resolution +
+        '<br /> create date: ' + image.created} +
+        '<br />  <br /> '"
+        />
+    </tr>
+</table>
+
+</body>
+</html>

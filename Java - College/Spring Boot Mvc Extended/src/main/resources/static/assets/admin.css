@@ -1,0 +1,26 @@
+html,body{
+    background-color: darkgrey;
+}
+h1{
+    font-style: inherit;
+    font-size: 5em;
+    background-color: tomato;
+    font-family: "AR DECODE";
+}
+h2{
+    font-size: 2em;
+    text-align: center;
+    background-color: olive;
+    font-family: "Arial Rounded MT Bold";
+}
+
+p {
+    color:yellow;
+    text-align: center;
+}
+
+#adminStyle{
+    font-style: oblique;
+    font-family: "Bodoni MT Black";
+    color: red;
+}

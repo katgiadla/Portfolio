@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Signle image</title>
+    <link rel="stylesheet" th:href="@{/assets/singlePic.css}"/>
+</head>
+<body>
+<h2>Single image</h2>
+<table>
+        <img th:src="@{'/images/' + ${image.name}}" th:utext="${ '<br /> name: ' + image.name + '  <br /> size: ' + image.size + '  <br /> res:  '
+         + image.resolution + '  <br /> create date: ' + image.created} + ' <br />  <br /> '"/>
+</table>
+</body>
+</html>
