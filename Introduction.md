@@ -1,14 +1,6 @@
-Matthew Tchorek
-3'rd year applied computer science student.
-
-Interested in: Back-end(Spring & thymeleaf)  and if I'll see an useful opportunity 
-to enlarge my projects, I'll implement it, soon or later
-
-
 # Projects
 All java projects created during the summer semester.
 https://github.com/Tchorson/Java_GCL07_lato_2018_Mateusz_Tchorek
-
 
 
 
