@@ -1,6 +1,8 @@
 Matthew Tchorek
 3'rd year applied computer science student.
-Interested in: Back-end(Spring & thymeleaf)  and if I'll see an useful opportunity  to enlarge my projects, I'll implement it, soon or later.
+
+Interested in: Back-end(Spring & thymeleaf)  and if I'll see an useful opportunity 
+to enlarge my projects, I'll implement it, soon or later
 
 
 # Projects
@@ -15,7 +17,7 @@ This repository contains (and will be containing) my own projects made with it's
 Why?
 
 To simplify my life.
-I want to learn English & want keep my learning progress in 1 place? Let's build a dictionary. Something like that.
+I want to learn English & want keep my learning progress in 1 place? Let's build a desktop app dictionary! 
 
 
 Spring - remake - all projects made from scratch again due to remind framework.
