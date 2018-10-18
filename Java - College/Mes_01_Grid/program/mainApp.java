@@ -1,5 +1,4 @@
 package program;
-
 import data.Grid;
 
 import java.io.BufferedReader;
@@ -17,11 +16,8 @@ public class mainApp {
 
     public static void main(String[] args){
         mainApp mainApp = new mainApp();
-        mainApp.loadFile("C:\\Users\\UnknownUser\\IdeaProjects\\MES_01\\src\\data\\dane.txt");
+        mainApp.loadFile("C:\\Users\\MTchorek\\IdeaProjects\\MES_01\\src\\data\\dane.txt");
         Grid grid = new Grid(Integer.parseInt(mainApp.getFileData().get("L")),Integer.parseInt(mainApp.getFileData().get("H")),Integer.parseInt(mainApp.getFileData().get("NL")),Integer.parseInt(mainApp.getFileData().get("NH")));
-        //Grid grid = new Grid(10,30,4,7);
-
-        grid.printGrid();
     }
 
     public mainApp() {
@@ -43,6 +39,5 @@ public class mainApp {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

@@ -1,47 +1,70 @@
 package data;
 
-public class Grid {
-    private int l, h, nL, nH, elementsAmount,nodesAmount;
-    private double dL, dH;
-    private Node[] nodesArray;
-    private Element[] elementsArray;
+import java.util.LinkedList;
+import java.util.List;
 
-    public Grid(int l, int h, int nL, int nH) {
-        this.l = l;
-        this.h = h;
-        this.nL = nL;
-        this.nH = nH;
-        elementsAmount = (nH -1)*(nL-1);
-        nodesAmount = nH*nL;
-        nodesArray = new Node[nodesAmount];
-        elementsArray = new Element[elementsAmount];
-        dH = h/nH;
-        dL = l/nL;
+public class Grid {
+    private int length, height, nodesAtLength, nodesAtHeight, elementsAmount,nodesAmount;
+    private int deltaLength, deltaHeight;
+    private List<Node> nodesCollection;
+    private List<Element> elementsCollection;
+
+    public Grid(int length, int height, int nodesAtLength, int nodesAtHeight) {
+        this.length = length;
+        this.height = height;
+        this.nodesAtLength = nodesAtLength;
+        this.nodesAtHeight = nodesAtHeight;
+        elementsAmount = (nodesAtHeight -1)*(nodesAtLength -1);
+        nodesAmount = nodesAtHeight * nodesAtLength;
+        nodesCollection = new LinkedList<>();
+        elementsCollection = new LinkedList<>();
+        deltaHeight = height / (nodesAtHeight-1);
+        deltaLength = length / (nodesAtLength-1);
         this.createGrid();
     }
 
     private void createGrid(){
-        int elementIndex = 0;
-        for(int x = 0; x<nL-1;x++){
-            for(int y = 0; y<nH-1;y++){
-                int exampleTemperature = x + y;
-                elementsArray[elementIndex]=new Element();
-                elementsArray[elementIndex].setNodes(
-                        new Node((double)x*l/(nL-1),         (double)y*h/(nH-1),         exampleTemperature),
-                        new Node((double)x*l/(nL-1)+l/(nL-1),(double)y*h/(nH-1),         exampleTemperature),
-                        new Node((double)x*l/(nL-1)+l/(nL-1),(double)y*h/(nH-1)+h/(nH-1),exampleTemperature),
-                        new Node((double)x*l/(nL-1),         (double)y*h/(nH-1)+h/(nH-1),exampleTemperature));
+        for(int x = 0; x< nodesAtLength -1; x++){
+            for(int y = 0; y< nodesAtHeight -1; y++){
 
-                elementIndex++;
+                int xPattern = x* length /(nodesAtLength -1);
+                int yPattern = y* height /(nodesAtHeight -1);
+
+                Element exampleElement = new Element();
+                exampleElement.setNodes(
+                        new Node(xPattern,                   yPattern               ,xPattern + yPattern ),
+                        new Node(xPattern+ deltaLength,   yPattern               ,xPattern + deltaLength + yPattern ),
+                        new Node(xPattern+ deltaLength,yPattern+ deltaHeight  ,xPattern + deltaLength + yPattern + deltaHeight),
+                        new Node(xPattern,                yPattern+ deltaHeight  ,xPattern + yPattern + deltaHeight)
+                );
+                elementsCollection.add(exampleElement);
+            }
+        }
+        this.collectNodes();
+    }
+
+    private void collectNodes(){
+        for(Element element: elementsCollection) {
+            if (!nodesCollection.contains(element.getNode1())) {
+                nodesCollection.add(element.getNode1());
+            }
+            if (!nodesCollection.contains(element.getNode2())) {
+                nodesCollection.add(element.getNode2());
+            }
+            if (!nodesCollection.contains(element.getNode3())) {
+                nodesCollection.add(element.getNode3());
+            }
+            if (!nodesCollection.contains(element.getNode4())) {
+                nodesCollection.add(element.getNode4());
             }
         }
     }
 
-    public void printGrid(){
-        int index = 0;
-        for(Element element : elementsArray){
-            System.out.println("element nr: "+(index+1)+"\n" + element.toString());
-            index++;
-        }
+    public void print(List<?> inputObject) {
+            int index = 0;
+            for (Object element : inputObject) {
+                System.out.println((index + 1) + "\n" + element.toString());
+                index++;
+            }
     }
 }

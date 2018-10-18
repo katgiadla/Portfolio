@@ -10,7 +10,6 @@ public class Node {
         this.y = y;
         this.temperature = temperature;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -20,10 +19,8 @@ public class Node {
                 Double.compare(Node.y, y) == 0 &&
                 Double.compare(Node.temperature, temperature) == 0;
     }
-
     @Override
     public int hashCode() {
-
         return Objects.hash(x, y, temperature);
     }
 
@@ -54,7 +51,6 @@ public class Node {
     public String getID(){
         return "x: "+ x + " y: "+y;
     }
-
     @Override
     public String toString() {
         return "x=" + x +", y=" + y +", temperature=" + temperature +" \t";

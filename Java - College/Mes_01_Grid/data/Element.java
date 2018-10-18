@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Element {
     private Node[] nodeArray;
 
-
     public Element(){
         nodeArray  = new Node[4];
     }
@@ -32,10 +31,6 @@ public class Element {
     public Node getNode4()
     {
         return nodeArray[3];
-    }
-
-    public Node[] getNodeArray() {
-        return nodeArray;
     }
 
     @Override
