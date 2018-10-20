@@ -7,13 +7,12 @@ import java.util.List;
 import java.util.Random;
 
 public class MainApp {
-
-
     public static void main (String [] args) throws Exception {
         Functions functions = new Functions();
          Random random = new Random();
 
         double W1, b1, W2, b2;
+        double E = 0.01; //stage of learning
         List<Double> valuesCollection = new LinkedList<>();
         List<Double> randomArgumentsCollection = new LinkedList<>();
 
@@ -39,5 +38,7 @@ public class MainApp {
         List<Double> z3 = functions.NN2(randomArgumentsCollection,W1,W2,b1,b2);
         double mse3 = functions.MSE(valuesCollection,z3);
         System.out.println(mse3);
+
+        functions.doSimulation(randomArgumentsCollection, valuesCollection, W1, b1,E);
     }
 }
