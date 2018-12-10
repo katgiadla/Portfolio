@@ -44,11 +44,8 @@ public class Jacobian {
     }
 
     /**
-     *
      * [element][kolmna w ktorej sa punkty]
      */
-
-
     private void createNodeArray(List<Element> inputElement){
         int index = 0;
         for(Element element: inputElement){
@@ -89,7 +86,6 @@ public class Jacobian {
         }
     }
 
-
     private void calculateDerivativeArray() {
 
         for (int j = 0; j < deltaNdeltaEtaArray.length; j++) {
@@ -104,9 +100,6 @@ public class Jacobian {
             deltaNdeltaEtaArray[3][j] = 0.25 * (1 - local2DArray[j].getKsi());
         }
     }
-
-    /* int x[][][]=new int[5][8][10];
-        System.out.println(x.length+" "+x[1].length+" "+x[0][1].length);*/
 
     private void calculateJacobianElements() {
         for (int k = 0; k < nodesFromGrid.length; k++) {

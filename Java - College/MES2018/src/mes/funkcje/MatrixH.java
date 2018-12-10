@@ -8,7 +8,9 @@ public class MatrixH {
      * [elementy][rozmiar][rozmiar]
      * [elementy][nrtablicy][rozmiar][rozmiar]
      */
-    private final double CONDUCTIVITY = 30;
+    private final double CONDUCTIVITY;//30 alfa 300
+    private final double CONVECTION; //25
+
     double[][][] reversedJacobian;     //
     double[][] detJ;                   // All imported from jacobian object (first exel tab)
     double[][] deltaNdeltaKsiArray;  //
@@ -28,7 +30,6 @@ public class MatrixH {
 
 
     List<Element> importedElements;
-    private final double CONVECTION = 25;
     private double[][][] border_H_Array;
      //edgeCalculationPoints = new Local2D[8];
 
@@ -52,7 +53,7 @@ public class MatrixH {
 
                 double n2_p2 = element.calculateShapeFunction2(
                         element.getLocal_2D_Calculation_Points()[1].getKsi(),
-                        element.getLocal_2D_Calculation_Points()[1].getEta());;
+                        element.getLocal_2D_Calculation_Points()[1].getEta());
 
                 double[][] calculation_Point_1_Array = {{n1_p1*n1_p1*CONVECTION,n1_p1*n2_p1*CONVECTION,0,0},{n1_p1*n2_p1*CONVECTION,n2_p1*n2_p1*CONVECTION,0,0},{0,0,0,0},{0,0,0,0}};
                 double[][] calculation_Point_2_Array = {{n1_p2*n1_p2*CONVECTION,n1_p2*n2_p2*CONVECTION,0,0},{n1_p2*n2_p2*CONVECTION,n2_p2*n2_p2*CONVECTION,0,0},{0,0,0,0},{0,0,0,0}};
@@ -171,8 +172,6 @@ public class MatrixH {
             }
 
 
-
-
             for(int i=0;i<4;i++){
                 for(int j =0;j<4;j++){
 
@@ -184,13 +183,15 @@ public class MatrixH {
 
     }
 
-    public MatrixH(List<Element> importedElements, double[][][] reversedJacobian, double[][] detJ, double[][] deltaNdeltaKsiArray, double[][] deltaNdeltaEtaArray, double[][][] jacobian) {
+    public MatrixH(List<Element> importedElements, double[][][] reversedJacobian, double[][] detJ, double[][] deltaNdeltaKsiArray, double[][] deltaNdeltaEtaArray, double[][][] jacobian, double inputConvection, double inputConductivity) {
         this.importedElements = importedElements;
         this.reversedJacobian = reversedJacobian;
         this.detJ = detJ;
         this.deltaNdeltaKsiArray = deltaNdeltaKsiArray;
         this.deltaNdeltaEtaArray = deltaNdeltaEtaArray;
         this.jacobian = jacobian;
+        this.CONVECTION = inputConvection;
+        this.CONDUCTIVITY = inputConductivity;
 
         deltaNdeltaXtimesTransposeDetJ = new double[jacobian.length][4][4][4];
         deltaNdeltaYtimesTransposeDetJ = new double[jacobian.length][4][4][4];
@@ -207,16 +208,13 @@ public class MatrixH {
 
         this.calculateDeltaNdeltaXandDeltaY();
         this.calculateCalculationPoints();
-        //this.printCalculationPoints();
         this.multipleCalculationPointsByDetJ();
-        //this.printDelta_N_Delta_X_AndDeltaY();
 
         this.multipleSumXandYcalculationPointsCoordinates();
         this.calculateMatrixH();
-        //this.printMatrixH();
         this.calculateBorders();
         this.calculateGlobalMatrixH();
-        this.printMatrixH();
+        //this.printMatrixH();
 
     }
 

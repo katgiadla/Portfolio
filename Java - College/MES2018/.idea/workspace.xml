@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="775e2681-7cf4-45c8-8bd2-f5fba7e86955" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Spring Boot Mvc Extended/src/main/java/com/tchorek/springbootextended/data/ToolsPicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot Mvc Extended/src/main/java/com/tchorek/springbootextended/data/ToolsPicture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot Mvc Extended/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot Mvc Extended/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="775e2681-7cf4-45c8-8bd2-f5fba7e86955" name="Default" comment="Altered local final variables to variables from globalData (there where file loading happens)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MES2018/mes/funkcje/GlobalData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MES2018/mes/mainApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mes/data/dane.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/mes/data/dane.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mes/funkcje/GlobalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mes/funkcje/GlobalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mes/funkcje/Jacobian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mes/funkcje/Jacobian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mes/funkcje/MatrixC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mes/funkcje/MatrixC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mes/funkcje/MatrixH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mes/funkcje/MatrixH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mes/funkcje/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mes/funkcje/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mes/mainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mes/mainApp.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,43 +26,58 @@
       <file leaf-file-name="MatrixH.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixH.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3706">
-              <caret line="218" column="8" selection-start-line="218" selection-start-column="8" selection-end-line="218" selection-end-column="8" />
+            <state relative-caret-position="145">
+              <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainApp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mes/mainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlobalData.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GlobalData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mes/funkcje/GlobalData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="77">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2671#2672#0" expanded="true" />
+                <element signature="e#2706#2707#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dane.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mes/data/dane.txt">
+      <file leaf-file-name="Grid.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            <state relative-caret-position="85">
+              <caret line="6" column="86" lean-forward="true" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jacobian.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-240">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatrixC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -99,16 +122,16 @@
         <option value="$PROJECT_DIR$/src/mes/pola/Local2D.java" />
         <option value="$PROJECT_DIR$/src/mes/pola/Jacobian.java" />
         <option value="$PROJECT_DIR$/src/mes/pola/MatrixH.java" />
-        <option value="$PROJECT_DIR$/src/mes/funkcje/Node.java" />
-        <option value="$PROJECT_DIR$/src/mes/funkcje/MatrixC.java" />
         <option value="$PROJECT_DIR$/src/mes/funkcje/Local2D.java" />
-        <option value="$PROJECT_DIR$/src/mes/funkcje/Grid.java" />
         <option value="$PROJECT_DIR$/src/mes/funkcje/Element.java" />
-        <option value="$PROJECT_DIR$/src/mes/funkcje/MatrixH.java" />
         <option value="$PROJECT_DIR$/src/mes/funkcje/Jacobian.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Node.java" />
         <option value="$PROJECT_DIR$/src/mes/data/dane.txt" />
-        <option value="$PROJECT_DIR$/src/mes/funkcje/GlobalData.java" />
         <option value="$PROJECT_DIR$/src/mes/mainApp.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Grid.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/GlobalData.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/MatrixC.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/MatrixH.java" />
       </list>
     </option>
   </component>
@@ -121,11 +144,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="332" />
-    <option name="y" value="-14" />
-    <option name="width" value="1155" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="732" />
+    <option name="width" value="1195" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -310,38 +332,39 @@
       <workItem from="1543570391503" duration="941000" />
       <workItem from="1544280639682" duration="41587000" />
       <workItem from="1544438582857" duration="2086000" />
-      <workItem from="1544460502929" duration="838000" />
+      <workItem from="1544460502929" duration="8206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123197000" />
+    <option name="totallyTimeSpent" value="130565000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="586" y="0" width="956" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.4957537" visible="true" weight="0.32357043" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.32291666" side_tool="true" visible="true" weight="0.36827585" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5042463" side_tool="true" visible="true" weight="0.32357043" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6770833" weight="0.36827585" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10546875" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6730361" weight="0.23291492" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22399151" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="SciView" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40689656" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,45 +372,17 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4986979" weight="0.32551724" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="SciView" order="5" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20502092" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.100409836" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27196652" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32914925" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Altered local final variables to variables from globalData (there where file loading happens)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Altered local final variables to variables from globalData (there where file loading happens)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -422,6 +417,8 @@
           <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2671#2672#0" expanded="true" />
+            <element signature="e#2706#2707#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -437,11 +434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -458,6 +450,8 @@
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2671#2672#0" expanded="true" />
+            <element signature="e#2706#2707#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -466,6 +460,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="56" column="182" selection-start-line="56" selection-start-column="182" selection-end-line="56" selection-end-column="182" />
+          <folding>
+            <element signature="method#setNode_ID#0;class#Element#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -487,11 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -506,11 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="26" column="187" selection-start-line="26" selection-start-column="187" selection-end-line="26" selection-end-column="187" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -539,11 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="26" column="187" selection-start-line="26" selection-start-column="187" selection-end-line="26" selection-end-column="187" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -565,6 +547,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="method#setNode_ID#0;class#Element#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -596,6 +581,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="method#setNode_ID#0;class#Element#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -679,10 +667,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixC.java">
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        <state relative-caret-position="1292">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
@@ -693,66 +681,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Grid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Element.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="56" column="182" selection-start-line="56" selection-start-column="182" selection-end-line="56" selection-end-column="182" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixH.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3706">
-          <caret line="218" column="8" selection-start-line="218" selection-start-column="8" selection-end-line="218" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/GlobalData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#setNode_ID#0;class#Element#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mes/data/dane.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mes/mainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/data/dane.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="86" lean-forward="true" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/GlobalData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#2671#2672#0" expanded="true" />
+            <element signature="e#2706#2707#0" expanded="true" />
           </folding>
         </state>
       </provider>
