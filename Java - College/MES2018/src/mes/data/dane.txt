@@ -1,0 +1,12 @@
+initialTemp=100
+simTime=500
+simStepTime=50
+envTemp=1200
+alfa=300
+L=10
+H=30
+NH=7
+NL=4
+specHeat=700
+conductivity=25
+density=7800

@@ -1,6 +1,6 @@
 package com.tchorek.springbootextended.data;
 
-import org.apache.tomcat.util.http.fileupload.IOUtils;
+
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
