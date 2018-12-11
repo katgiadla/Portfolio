@@ -30,7 +30,7 @@ public class MatrixC {
 
         this.calculateCalculationPointsFromShapeFunctions();
         this.calculateMatrixC();
-        this.printMatrixC();
+        //this.printMatrixC();
     }
 
     private void calculateCalculationPointsFromShapeFunctions(){

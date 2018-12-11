@@ -4,12 +4,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Grid {
-    private int length, height, amountNodesAtLengthOfGrid, amountNodesAtHeightOfGrid, elementsAmount,nodesAmount;
-    private int deltaLength, deltaHeight, elementsIndex;
+    private int amountNodesAtLengthOfGrid, amountNodesAtHeightOfGrid, elementsAmount,nodesAmount;
+    double length, height;
+    private double deltaLength, deltaHeight, elementsIndex;
     private List<Node> nodesCollection;
     private List<Element> elementsCollection;
 
-    public Grid(int length, int height, int amountNodesAtLengthOfGrid, int amountNodesAtHeightOfGrid) {
+    public Grid(double length, double height, int amountNodesAtLengthOfGrid, int amountNodesAtHeightOfGrid) {
         this.length = length;
         this.height = height;
         this.amountNodesAtLengthOfGrid = amountNodesAtLengthOfGrid;
@@ -27,8 +28,8 @@ public class Grid {
         int elementIndex = 0;
         for(int x = 0; x< amountNodesAtLengthOfGrid -1; x++){
             for(int y = 0; y< amountNodesAtHeightOfGrid -1; y++) {
-                int xPattern = x* length /(amountNodesAtLengthOfGrid -1);
-                int yPattern = y* height /(amountNodesAtHeightOfGrid -1);
+                double xPattern = x* length /(amountNodesAtLengthOfGrid -1);
+                double yPattern = y* height /(amountNodesAtHeightOfGrid -1);
 
                 Node[] elementNodes = {
                         new Node(x*amountNodesAtHeightOfGrid+y+1,           xPattern,                  yPattern               , 20,this.checkIfBorderNode(xPattern,                   yPattern)),
@@ -46,7 +47,7 @@ public class Grid {
         this.collectNodes();
     }
 
-    private boolean checkIfBorderNode(int x, int y){
+    private boolean checkIfBorderNode(double x, double y){
         if(x - deltaLength<0   || x + deltaLength>length){return true;}
         if(y - deltaHeight<0   || y + deltaHeight>height){return true;}
         return false;
