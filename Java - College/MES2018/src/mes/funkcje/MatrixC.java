@@ -1,5 +1,7 @@
 package mes.funkcje;
 
+import java.util.List;
+
 public class MatrixC {
     private final double SPECIFIC_HEAT;//700
     private final double DENSITY;//7800
@@ -12,10 +14,15 @@ public class MatrixC {
     double [] N3;
     double [] N4;
 
+    List<Element> importedElements;
     private double[][][][] shapeFunctionsPointsArray;
     private double[][][] matrixC;
+    private double [][] globalMatrixC;
 
-    public MatrixC(double[][] detJ, double[][][] jacobian, double[][][] reversedJacobian, double[] n1, double[] n2, double[] n3, double[] n4, double inputSpecificHeat, double inputDensity) {
+    private GlobalData globalData;
+
+    public MatrixC(List<Element> importedElements, double[][] detJ, double[][][] jacobian, double[][][] reversedJacobian, double[] n1, double[] n2, double[] n3, double[] n4, GlobalData globalData) {
+        this.importedElements = importedElements;
         this.detJ = detJ;
         this.jacobian = jacobian;
         this.reversedJacobian = reversedJacobian;
@@ -25,11 +32,15 @@ public class MatrixC {
         N4 = n4;
         shapeFunctionsPointsArray = new double[jacobian.length][4][4][4];
         matrixC = new double[jacobian.length][4][4];
-        this.SPECIFIC_HEAT = inputSpecificHeat;
-        this.DENSITY = inputDensity;
+        globalMatrixC = new double[globalData.getnH()*globalData.getnB()][globalData.getnB()*globalData.getnH()];
+
+        this.globalData = globalData;
+        this.SPECIFIC_HEAT = globalData.getIndividualHeat();
+        this.DENSITY = globalData.getDensity();
 
         this.calculateCalculationPointsFromShapeFunctions();
         this.calculateMatrixC();
+        this.calculateGlobalMatrixC();
         //this.printMatrixC();
     }
 
@@ -60,6 +71,42 @@ public class MatrixC {
         }
     }
 
+
+    private void calculateGlobalMatrixC() {
+        for(int i=0;i<globalMatrixC.length;i++){
+            for(int j=0;j<globalMatrixC[0].length;j++){
+                globalMatrixC[i][j]=0;
+            }
+        }
+
+        for (int elemIndex = 0; elemIndex < jacobian.length; elemIndex++) {
+            for (int i = 0; i < globalMatrixC.length; i++) {
+                for (int j = 0; j < globalMatrixC[0].length; j++) {
+
+                    for(int localRowIndex =0;localRowIndex<importedElements.get(elemIndex).getNodes().length;localRowIndex++){
+                        for(int localColumnIndex =0;localColumnIndex<importedElements.get(elemIndex).getNodes().length;localColumnIndex++){
+
+                            if(importedElements.get(elemIndex).getNodes()[localRowIndex].getId() == i && importedElements.get(elemIndex).getNodes()[localColumnIndex].getId() == j) {
+                                globalMatrixC[i][j] += matrixC[elemIndex][localRowIndex][localColumnIndex];
+                                continue;
+                            }
+                        }
+                    }
+                }
+            }
+            /*for(int testRowIndex =0;testRowIndex<globalMatrixC.length;testRowIndex++) {
+                for (int testColumnIndex = 0; testColumnIndex < globalMatrixC[0].length; testColumnIndex++) {
+                    System.out.print(globalMatrixC[testRowIndex][testColumnIndex] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+            System.out.println();*/
+        }
+
+
+    }
+
     private void printMatrixC() {
         for (int elementIndex = 0; elementIndex < matrixC.length; elementIndex++) {
             System.out.println("element: "+(elementIndex+1));
@@ -70,5 +117,13 @@ public class MatrixC {
                 System.out.println();
             }
         }
+    }
+
+    public double[][][] getMatrixC() {
+        return matrixC;
+    }
+
+    public double[][] getGlobalMatrixC() {
+        return globalMatrixC;
     }
 }

@@ -7,7 +7,6 @@ public class Grid {
     private int amountNodesAtLengthOfGrid, amountNodesAtHeightOfGrid, elementsAmount,nodesAmount;
     double length, height;
     private double deltaLength, deltaHeight, elementsIndex;
-    private List<Node> nodesCollection;
     private List<Element> elementsCollection;
 
     public Grid(double length, double height, int amountNodesAtLengthOfGrid, int amountNodesAtHeightOfGrid) {
@@ -17,7 +16,6 @@ public class Grid {
         this.amountNodesAtHeightOfGrid = amountNodesAtHeightOfGrid;
         elementsAmount = (amountNodesAtHeightOfGrid -1)*(amountNodesAtLengthOfGrid -1);
         nodesAmount = amountNodesAtHeightOfGrid * amountNodesAtLengthOfGrid;
-        nodesCollection = new LinkedList<>();
         elementsCollection = new LinkedList<>();
         deltaHeight = height / (amountNodesAtHeightOfGrid -1);
         deltaLength = length / (amountNodesAtLengthOfGrid -1);
@@ -28,23 +26,23 @@ public class Grid {
         int elementIndex = 0;
         for(int x = 0; x< amountNodesAtLengthOfGrid -1; x++){
             for(int y = 0; y< amountNodesAtHeightOfGrid -1; y++) {
-                double xPattern = x* length /(amountNodesAtLengthOfGrid -1);
-                double yPattern = y* height /(amountNodesAtHeightOfGrid -1);
+                double xPattern = ((x* length)*10) /((amountNodesAtLengthOfGrid -1)*10);
+                double yPattern = ((y* height)*10) /((amountNodesAtHeightOfGrid -1)*10);
 
                 Node[] elementNodes = {
-                        new Node(x*amountNodesAtHeightOfGrid+y+1,           xPattern,                  yPattern               , 20,this.checkIfBorderNode(xPattern,                   yPattern)),
-                        new Node((x+1)*amountNodesAtHeightOfGrid+y+1,    xPattern+ deltaLength,     yPattern               , 20,this.checkIfBorderNode(xPattern+ deltaLength,   yPattern)),
-                        new Node((x+1)*amountNodesAtHeightOfGrid+(y+1)+1,xPattern+ deltaLength,  yPattern+ deltaHeight  , 20,this.checkIfBorderNode(xPattern+ deltaLength,yPattern+ deltaHeight)),
-                        new Node(x*amountNodesAtHeightOfGrid+(y+1)+1,       xPattern,               yPattern+ deltaHeight  , 20,this.checkIfBorderNode(xPattern,                yPattern+ deltaHeight))};
+                        new Node(x*amountNodesAtHeightOfGrid+y,           xPattern,                  yPattern               , 20,this.checkIfBorderNode(xPattern,                   yPattern)),
+                        new Node((x+1)*amountNodesAtHeightOfGrid+y,    xPattern+ deltaLength,     yPattern               , 20,this.checkIfBorderNode(xPattern+ deltaLength,   yPattern)),
+                        new Node((x+1)*amountNodesAtHeightOfGrid+(y+1),xPattern+ deltaLength,  yPattern+ deltaHeight  , 20,this.checkIfBorderNode(xPattern+ deltaLength,yPattern+ deltaHeight)),
+                        new Node(x*amountNodesAtHeightOfGrid+(y+1),       xPattern,               yPattern+ deltaHeight  , 20,this.checkIfBorderNode(xPattern,                yPattern+ deltaHeight))};
 
                 int []  nodesID = {elementNodes[0].getId(),elementNodes[1].getId(),elementNodes[2].getId(),elementNodes[3].getId()};
 
                 Element element = new Element(++elementIndex,nodesID,elementNodes);
-                //System.out.println(   element.toString());
+                //System.out.println( "element: "+elementIndex+" "+  element.toString());
                 elementsCollection.add(element);
             }
         }
-        this.collectNodes();
+
     }
 
     private boolean checkIfBorderNode(double x, double y){
@@ -53,22 +51,6 @@ public class Grid {
         return false;
     }
 
-    private void collectNodes(){
-        for(Element element: elementsCollection) {
-            if (!nodesCollection.contains(element.getNode1())) {
-                nodesCollection.add(element.getNode1());
-            }
-            if (!nodesCollection.contains(element.getNode2())) {
-                nodesCollection.add(element.getNode2());
-            }
-            if (!nodesCollection.contains(element.getNode3())) {
-                nodesCollection.add(element.getNode3());
-            }
-            if (!nodesCollection.contains(element.getNode4())) {
-                nodesCollection.add(element.getNode4());
-            }
-        }
-    }
 
     public void print(List<?> inputObject) {
         int index = 0;
@@ -76,10 +58,6 @@ public class Grid {
             System.out.println((index + 1) + "\n" + element.toString());
             index++;
         }
-    }
-
-    public List<Node> getNodesCollection() {
-        return nodesCollection;
     }
 
     public List<Element> getElementsCollection() {

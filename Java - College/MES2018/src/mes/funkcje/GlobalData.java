@@ -38,18 +38,18 @@ public class GlobalData {
     }
 
     private void setAllDataFromFIle(){
-        initialTemperature = Integer.parseInt(fileData.get("initialTemp"));
-        simulationTime = Integer.parseInt(fileData.get("simTime"));
-        simulationStepTime = Integer.parseInt(fileData.get("simStepTime"));
-        environmentTemperature= Integer.parseInt(fileData.get("envTemp"));
-        alfa= Integer.parseInt(fileData.get("alfa"));
-        B =Integer.parseInt(fileData.get("B"));
-        H= Integer.parseInt(fileData.get("H"));
+        initialTemperature = Double.parseDouble(fileData.get("initialTemp"));
+        simulationTime = Double.parseDouble(fileData.get("simTime"));
+        simulationStepTime = Double.parseDouble(fileData.get("simStepTime"));
+        environmentTemperature= Double.parseDouble(fileData.get("envTemp"));
+        alfa= Double.parseDouble(fileData.get("alfa"));
+        B =Double.parseDouble(fileData.get("B"));
+        H= Double.parseDouble(fileData.get("H"));
         nB =Integer.parseInt(fileData.get("NB"));
         nH =Integer.parseInt(fileData.get("NH"));
-        individualHeat= Integer.parseInt(fileData.get("specHeat"));
-        conductivity= Integer.parseInt(fileData.get("conductivity"));
-        density= Integer.parseInt(fileData.get("density"));
+        individualHeat= Double.parseDouble(fileData.get("specHeat"));
+        conductivity= Double.parseDouble(fileData.get("conductivity"));
+        density= Double.parseDouble(fileData.get("density"));
     }
 
     public int getnH() {

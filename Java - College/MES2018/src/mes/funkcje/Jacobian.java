@@ -41,8 +41,26 @@ public class Jacobian {
         this.calculateJacobianElements();
         this.calculateDetJ();
         this.calculateReversedJacobianElements();
+        //this.printJacobian();
+        //this.printDNDKSI();
+        //this.printDNDETA();
+        //this.printCoordinates();
     }
 
+    private void printCoordinates(){
+        for(int i=0;i<4;i++){
+            System.out.println(N1[i]+" "+N2[i]+" "+N3[i]+" "+N4[i]);
+        }
+    }
+
+    private void printDNDETA() {
+        for (int i = 0; i <deltaNdeltaEtaArray.length;i++){
+            for(int j=0;j<deltaNdeltaKsiArray[0].length;j++){
+                System.out.print(deltaNdeltaEtaArray[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
     /**
      * [element][kolmna w ktorej sa punkty]
      */
@@ -133,6 +151,27 @@ public class Jacobian {
                 reversedDetJ[k][2][i] = -jakobian[k][2][i] / detJ[k][i];
                 reversedDetJ[k][3][i] = jakobian[k][0][i] / detJ[k][i];
             }
+        }
+    }
+
+    private void printJacobian() {
+        for (int index = 0; index < jakobian.length; index++) {
+            for (int i = 0; i < jakobian[0].length; i++) {
+                for (int j = 0; j < jakobian[0][0].length; j++) {
+                    System.out.print(jakobian[index][i][j] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
+    private void printDNDKSI(){
+        for(int i=0;i<deltaNdeltaKsiArray.length;i++){
+            for(int j=0;j<deltaNdeltaKsiArray[0].length;j++){
+                System.out.print(deltaNdeltaKsiArray[i][j]+" ");
+            }
+            System.out.println();
         }
     }
 

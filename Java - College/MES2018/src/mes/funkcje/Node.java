@@ -8,14 +8,6 @@ public class Node {
     private boolean borderCondition;
     private static final int UNKNOWN_TEMPERATURE = -900000000;
 
-    public Node() {
-        id = -1;
-        x=-1;
-        y=-1;
-        temperature=UNKNOWN_TEMPERATURE;
-        borderCondition=false;
-    }
-
     public Node(double x, double y) {
         id = -1;
         this.x = x;

@@ -12,7 +12,7 @@ public class Element {
     private boolean[] borders_ID = new boolean[4];
     private double [] borders_length = new double[4];
 
-    private double[][] local_H;
+
 
     private Local2D[] local_2D_Calculation_Points = {
             new Local2D(-KSI, -1),    new Local2D(KSI, -1),//1
@@ -22,19 +22,10 @@ public class Element {
     };
 
 
-
-
     public Element(int element_ID, int[] nodes_ID, Node[] nodes) {
         this.element_ID = element_ID;
         this.nodes_ID = nodes_ID;
         this.nodes = nodes;
-
-        local_H = new double[4][4];
-        for(int i =0;i<local_H.length;i++){
-            for(int j = 0;j<local_H.length;j++){
-                local_H[i][j]=0;
-            }
-        }
 
         for(int i =0;i<borders_ID.length;i++){
             borders_ID[i]=false;
@@ -83,14 +74,6 @@ public class Element {
 
     public Node[] getNodes() {
         return nodes;
-    }
-
-    public double[][] getLocal_H() {
-        return local_H;
-    }
-
-    public void setLocal_H(double[][] local_H) {
-        this.local_H = local_H;
     }
 
     public void setNodes(Node[] nodes) {
@@ -159,6 +142,6 @@ public class Element {
 
     @Override
     public String toString() {
-        return "nodes=" + this.getNode1() +" "+this.getNode2()+" "+this.getNode3()+" "+this.getNode4()+"\n";
+        return this.getNode1() +" "+this.getNode2()+" "+this.getNode3()+" "+this.getNode4()+"\n";
     }
 }
