@@ -13,6 +13,6 @@ public class mainApp {
                 globalData);
         MatrixC matrixC = new MatrixC(grid.getElementsCollection(),matrixH.getDetJ(),matrixH.getJacobian(),matrixH.getReversedJacobian(),jakobian_2d.getN1(),jakobian_2d.getN2(),jakobian_2d.getN3(),
                 jakobian_2d.getN4(), globalData);
-        TemperatureIteration temperatureIteration = new TemperatureIteration(matrixH.getGlobalMatrixH(),matrixH.getGlobalMatrixHnoBorderCondition(),matrixC.getGlobalMatrixC(), globalData);
+        TemperatureIteration temperatureIteration = new TemperatureIteration(matrixH.getGlobalMatrixH(),matrixH.getGlobalMatrixHnoBorderCondition(),matrixC.getGlobalMatrixC(),matrixH.getGlobalLoadVector() ,globalData);
     }
 }

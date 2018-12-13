@@ -31,7 +31,10 @@ public class MatrixH {
     private double[][] globalMatrixH;
     private double[][] globalMatrixHnoBorderCondition;
 
-    private double [][][] load_vector;
+    private double [][][] load_vector_calculation_points;
+    private double [] [] load_vector_elements;
+    private double [] globalLoadVector;
+
 
     List<Element> importedElements;
     private double[][][] border_H_Array;
@@ -54,14 +57,16 @@ public class MatrixH {
         this.CONVECTION = globalData.getAlfa();
         this.CONDUCTIVITY = globalData.getConductivity();
         this.ENVIRONMENT_TEMPERATURE = globalData.getEnvironmentTemperature();
-
+        globalLoadVector = new double[ globalData.getnH() * globalData.getnB()];
 
         deltaNdeltaXtimesTransposeDetJ = new double[jacobian.length][4][4][4];
         deltaNdeltaYtimesTransposeDetJ = new double[jacobian.length][4][4][4];
         deltaNdeltaXtimesTranspose = new double[jacobian.length][4][4][4];
         deltaNdeltaYtimesTranspose = new double[jacobian.length][4][4][4];
         sumXandYmultipliedByConductivity = new double[jacobian.length][4][4][4];
-        load_vector = new double[jacobian.length][4][4];
+        load_vector_calculation_points = new double[jacobian.length][4][4];
+        load_vector_elements = new double [jacobian.length][4];
+
 
         deltaNdeltaX = new double[jacobian.length][4][4];
         deltaNdeltaY = new double[jacobian.length][4][4];
@@ -70,48 +75,42 @@ public class MatrixH {
         globalMatrixH = new double[globalData.getnB()*globalData.getnH()][globalData.getnH()*globalData.getnB()];
         globalMatrixHnoBorderCondition = new double[globalData.getnB()*globalData.getnH()][globalData.getnH()*globalData.getnB()];
 
-
         this.calculateDeltaNdeltaXandDeltaY();
         this.calculateCalculationPoints();
         this.multipleCalculationPointsByDetJ();
 
         this.multipleSumXandYcalculationPointsCoordinates();
         this.calculateMatrixH();
-        this.calculateGlobalMatrixH();
-
-        globalMatrixHnoBorderCondition = globalMatrixH.clone();
-
-        this.test2();
-        //this.printMatrixH();
-
+        globalMatrixHnoBorderCondition = calculateGlobalMatrixH(matrixH);
         this.calculateBorders();
 
-        this.calculateGlobalMatrixH();
-
-        this.test();
-
+        globalMatrixH = calculateGlobalMatrixH(matrixH);
+        //this.testBorderCondition();
+        //this.testNoBorderCondition();
     }
 
-    private void test(){
+    private void testBorderCondition(){
         for(int i=0;i<globalMatrixHnoBorderCondition.length;i++){
             for(int j =0;j<globalMatrixHnoBorderCondition[0].length;j++){
-                System.out.print(globalMatrixHnoBorderCondition[i][j]+" ");
+                System.out.printf("%.6f\t  ",globalMatrixHnoBorderCondition[i][j]);
             }
             System.out.println();
         }
         System.out.println();
+        System.out.println();
     }
 
-    private void test2(){
+    private void testNoBorderCondition(){
         for(int i=0;i<globalMatrixH.length;i++){
             for(int j =0;j<globalMatrixH[0].length;j++){
-                System.out.print(globalMatrixH[i][j]+" ");
+                System.out.printf("%.6f\t  ",globalMatrixH[i][j]);
             }
             System.out.println();
         }
         System.out.println();
-    }
 
+        System.out.println();
+    }
 
     private void calculateBorders() {
         int elementIndex = 0;
@@ -147,12 +146,12 @@ public class MatrixH {
                 /**
                  * [element][krawedz][NrFunkcjiKsztaltu]
                  */
-                        load_vector[elementIndex][0][0] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction1(element.getLocal_2D_Calculation_Points()[0].getKsi(),element.getLocal_2D_Calculation_Points()[0].getEta())
+                        load_vector_calculation_points[elementIndex][0][0] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction1(element.getLocal_2D_Calculation_Points()[0].getKsi(),element.getLocal_2D_Calculation_Points()[0].getEta())
                         + CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction1(element.getLocal_2D_Calculation_Points()[1].getKsi(),element.getLocal_2D_Calculation_Points()[1].getEta()))*edge_1_detJ;
-                        load_vector[elementIndex][0][1] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction2(element.getLocal_2D_Calculation_Points()[1].getKsi(),element.getLocal_2D_Calculation_Points()[1].getEta())
+                        load_vector_calculation_points[elementIndex][0][1] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction2(element.getLocal_2D_Calculation_Points()[1].getKsi(),element.getLocal_2D_Calculation_Points()[1].getEta())
                         + CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction2(element.getLocal_2D_Calculation_Points()[0].getKsi(),element.getLocal_2D_Calculation_Points()[0].getEta()))*edge_1_detJ;
-                        load_vector[elementIndex][0][2] = 0;
-                        load_vector[elementIndex][0][3] = 0;
+                        load_vector_calculation_points[elementIndex][0][2] = 0;
+                        load_vector_calculation_points[elementIndex][0][3] = 0;
             }
 
             if (element.isEdge2Border()){
@@ -182,12 +181,12 @@ public class MatrixH {
                         border_H_Array[elementIndex][i][j]+=edge_2_sum[i][j];
                     }
                 }
-                    load_vector[elementIndex][1][0] = 0;
-                    load_vector[elementIndex][1][1] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction2(element.getLocal_2D_Calculation_Points()[2].getKsi(),element.getLocal_2D_Calculation_Points()[2].getEta())
+                    load_vector_calculation_points[elementIndex][1][0] = 0;
+                    load_vector_calculation_points[elementIndex][1][1] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction2(element.getLocal_2D_Calculation_Points()[2].getKsi(),element.getLocal_2D_Calculation_Points()[2].getEta())
                     + CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction2(element.getLocal_2D_Calculation_Points()[3].getKsi(),element.getLocal_2D_Calculation_Points()[3].getEta()))*edge_2_detJ;
-                    load_vector[elementIndex][1][2] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction3(element.getLocal_2D_Calculation_Points()[3].getKsi(),element.getLocal_2D_Calculation_Points()[3].getEta())
+                    load_vector_calculation_points[elementIndex][1][2] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction3(element.getLocal_2D_Calculation_Points()[3].getKsi(),element.getLocal_2D_Calculation_Points()[3].getEta())
                     + CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction3(element.getLocal_2D_Calculation_Points()[2].getKsi(),element.getLocal_2D_Calculation_Points()[2].getEta()))*edge_2_detJ;
-                    load_vector[elementIndex][1][3] = 0;
+                    load_vector_calculation_points[elementIndex][1][3] = 0;
             }
 
             if (element.isEdge3Border()){
@@ -219,11 +218,11 @@ public class MatrixH {
                     }
                 }
 
-                load_vector[elementIndex][2][0] = 0;
-                load_vector[elementIndex][2][1] = 0;
-                load_vector[elementIndex][2][2] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction3(element.getLocal_2D_Calculation_Points()[4].getKsi(),element.getLocal_2D_Calculation_Points()[4].getEta())
+                load_vector_calculation_points[elementIndex][2][0] = 0;
+                load_vector_calculation_points[elementIndex][2][1] = 0;
+                load_vector_calculation_points[elementIndex][2][2] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction3(element.getLocal_2D_Calculation_Points()[4].getKsi(),element.getLocal_2D_Calculation_Points()[4].getEta())
                         + CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction3(element.getLocal_2D_Calculation_Points()[5].getKsi(),element.getLocal_2D_Calculation_Points()[5].getEta()))*edge_3_detJ;
-                load_vector[elementIndex][2][3] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction4(element.getLocal_2D_Calculation_Points()[5].getKsi(),element.getLocal_2D_Calculation_Points()[5].getEta())
+                load_vector_calculation_points[elementIndex][2][3] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction4(element.getLocal_2D_Calculation_Points()[5].getKsi(),element.getLocal_2D_Calculation_Points()[5].getEta())
                         + CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction4(element.getLocal_2D_Calculation_Points()[4].getKsi(),element.getLocal_2D_Calculation_Points()[4].getEta()))*edge_3_detJ;
 
             }
@@ -257,11 +256,11 @@ public class MatrixH {
                         border_H_Array[elementIndex][i][j]+=edge_4_sum[i][j];
                     }
                 }
-                load_vector[elementIndex][3][0] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction1(element.getLocal_2D_Calculation_Points()[7].getKsi(),element.getLocal_2D_Calculation_Points()[7].getEta())
+                load_vector_calculation_points[elementIndex][3][0] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction1(element.getLocal_2D_Calculation_Points()[7].getKsi(),element.getLocal_2D_Calculation_Points()[7].getEta())
                         + CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction1(element.getLocal_2D_Calculation_Points()[6].getKsi(),element.getLocal_2D_Calculation_Points()[6].getEta()))*edge_4_detJ;
-                load_vector[elementIndex][3][1] =0;
-                load_vector[elementIndex][3][2] =0;
-                load_vector[elementIndex][3][3] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction4(element.getLocal_2D_Calculation_Points()[6].getKsi(),element.getLocal_2D_Calculation_Points()[6].getEta())
+                load_vector_calculation_points[elementIndex][3][1] =0;
+                load_vector_calculation_points[elementIndex][3][2] =0;
+                load_vector_calculation_points[elementIndex][3][3] = (CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction4(element.getLocal_2D_Calculation_Points()[6].getKsi(),element.getLocal_2D_Calculation_Points()[6].getEta())
                         + CONVECTION*ENVIRONMENT_TEMPERATURE*  element.calculateShapeFunction4(element.getLocal_2D_Calculation_Points()[7].getKsi(),element.getLocal_2D_Calculation_Points()[7].getEta()))*edge_4_detJ;
             }
 
@@ -271,14 +270,21 @@ public class MatrixH {
                 }
             }
 
-            /*for(int i=0;i<4;i++){
-                *//*for(int j =0;j<8;j++){
-                    System.out.println(element.getLocal_2D_Calculation_Points()[7].getKsi()+" "+element.getLocal_2D_Calculation_Points()[7].getEta());
-                }*//*
-                System.out.println("element: "+elementIndex+" "+load_vector[elementIndex][i][0] + " "+ load_vector[elementIndex][i][1]+" "+load_vector[elementIndex][i][2]+" "+load_vector[elementIndex][i][3]);
+                    for( int j = 0;j<load_vector_calculation_points[0].length;j++) {
+                        load_vector_elements[elementIndex][0] += load_vector_calculation_points[elementIndex][j][0];
+                        load_vector_elements[elementIndex][1] += load_vector_calculation_points[elementIndex][j][1];
+                        load_vector_elements[elementIndex][2] += load_vector_calculation_points[elementIndex][j][2];
+                        load_vector_elements[elementIndex][3] += load_vector_calculation_points[elementIndex][j][3];
+                    }
 
-            }*/
-            //System.out.println();
+                    for(int i=0;i<globalLoadVector.length;i++){
+                        for(int localIndex = 0;localIndex<element.getNodes().length;localIndex++){
+                            if(importedElements.get(elementIndex).getNodes()[localIndex].getId() == i) {
+                                globalLoadVector[i] += load_vector_elements[elementIndex][localIndex];
+                                //System.out.println(globalLoadVector[i]);
+                            }
+                        }
+                    }
             elementIndex++;
         }
     }
@@ -346,24 +352,24 @@ public class MatrixH {
     }
 
 
-    private void calculateGlobalMatrixH() {
-        for(int i=0;i<globalMatrixH.length;i++){
-            for(int j=0;j<globalMatrixH[0].length;j++){
-                globalMatrixH[i][j]=0;
+    private double[][] calculateGlobalMatrixH(double[][][] inputMatrix) {
+        double[][] localGlobalArray = new double[globalData.getnB()*globalData.getnH()][globalData.getnH()*globalData.getnB()];
+        for(int i=0;i<localGlobalArray.length;i++){
+            for(int j=0;j<localGlobalArray[0].length;j++){
+                localGlobalArray[i][j]=0;
             }
         }
 
         for (int elemIndex = 0; elemIndex < jacobian.length; elemIndex++) {
             //System.out.println(importedElements.get(elemIndex).getNodes()[0].getId()+" "+importedElements.get(elemIndex).getNodes()[1].getId()+" "+importedElements.get(elemIndex).getNodes()[2].getId()+" "+importedElements.get(elemIndex).getNodes()[3].getId());
-            for (int i = 0; i < globalMatrixH.length; i++) {
-                for (int j = 0; j < globalMatrixH[0].length; j++) {
+            for (int i = 0; i < localGlobalArray.length; i++) {
+                for (int j = 0; j < localGlobalArray[0].length; j++) {
 
                     for(int localRowIndex =0;localRowIndex<importedElements.get(elemIndex).getNodes().length;localRowIndex++){
                         for(int localColumnIndex =0;localColumnIndex<importedElements.get(elemIndex).getNodes().length;localColumnIndex++){
 
                             if(importedElements.get(elemIndex).getNodes()[localRowIndex].getId() == i && importedElements.get(elemIndex).getNodes()[localColumnIndex].getId() == j) {
-                                globalMatrixH[i][j] += matrixH[elemIndex][localRowIndex][localColumnIndex];
-                                continue;
+                                localGlobalArray[i][j] += matrixH[elemIndex][localRowIndex][localColumnIndex];
                             }
                         }
                     }
@@ -380,6 +386,8 @@ public class MatrixH {
         }
             //System.out.println(globalMatrixH.length+" "+ globalMatrixH[0].length);
 
+
+        return localGlobalArray;
     }
 
     private void printMatrixH() {
@@ -418,8 +426,8 @@ public class MatrixH {
         return matrix_H_noBorderCondition;
     }
 
-    public double[][][] getLoad_vector() {
-        return load_vector;
+    public double[][][] getLoad_vector_calculation_points() {
+        return load_vector_calculation_points;
     }
 
     public double[][][] getBorder_H_Array() {
@@ -432,6 +440,10 @@ public class MatrixH {
 
     public double[][] getGlobalMatrixHnoBorderCondition() {
         return globalMatrixHnoBorderCondition;
+    }
+
+    public double[] getGlobalLoadVector() {
+        return globalLoadVector;
     }
 }
 

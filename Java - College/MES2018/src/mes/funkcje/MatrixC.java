@@ -96,7 +96,7 @@ public class MatrixC {
             }
             /*for(int testRowIndex =0;testRowIndex<globalMatrixC.length;testRowIndex++) {
                 for (int testColumnIndex = 0; testColumnIndex < globalMatrixC[0].length; testColumnIndex++) {
-                    System.out.print(globalMatrixC[testRowIndex][testColumnIndex] + " ");
+                    System.out.printf("%.6f\t",globalMatrixC[testRowIndex][testColumnIndex]);
                 }
                 System.out.println();
             }
