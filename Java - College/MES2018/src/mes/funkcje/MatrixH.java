@@ -40,14 +40,13 @@ public class MatrixH {
 
     private GlobalData globalData;
 
-    public MatrixH(List<Element> importedElements, double[][][] reversedJacobian, double[][] detJ, double[][] deltaNdeltaKsiArray,
-                   double[][] deltaNdeltaEtaArray, double[][][] jacobian, GlobalData globalData) {
-        this.importedElements = importedElements;
-        this.reversedJacobian = reversedJacobian;
-        this.detJ = detJ;
-        this.deltaNdeltaKsiArray = deltaNdeltaKsiArray;
-        this.deltaNdeltaEtaArray = deltaNdeltaEtaArray;
-        this.jacobian = jacobian;
+    public MatrixH(Grid grid, Jacobian jakobian_2d, GlobalData globalData) {
+        this.importedElements = grid.getElementsCollection();
+        this.reversedJacobian = jakobian_2d.getReversedDetJ();
+        this.detJ = jakobian_2d.getDetJ();
+        this.deltaNdeltaKsiArray = jakobian_2d.getDeltaNdeltaKsiArray();
+        this.deltaNdeltaEtaArray = jakobian_2d.getDeltaNdeltaEtaArray();
+        this.jacobian = jakobian_2d.getJakobian();
         this.globalData = globalData;
         this.CONVECTION = globalData.getAlfa();
         this.CONDUCTIVITY = globalData.getConductivity();
@@ -80,31 +79,6 @@ public class MatrixH {
         this.calculateBorders();
 
         globalMatrixH = calculateGlobalMatrixH(matrixH);
-        //this.testBorderCondition();
-        //this.testNoBorderCondition();
-    }
-
-    private void testBorderCondition(){
-        for(int i=0;i<globalMatrixHnoBorderCondition.length;i++){
-            for(int j =0;j<globalMatrixHnoBorderCondition[0].length;j++){
-                System.out.printf("%.6f\t  ",globalMatrixHnoBorderCondition[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println();
-        System.out.println();
-    }
-
-    private void testNoBorderCondition(){
-        for(int i=0;i<globalMatrixH.length;i++){
-            for(int j =0;j<globalMatrixH[0].length;j++){
-                System.out.printf("%.6f\t  ",globalMatrixH[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println();
-
-        System.out.println();
     }
 
     private void calculateBorders() {
@@ -395,14 +369,6 @@ public class MatrixH {
         }
     }
 
-    public double[][][] getMatrixH() {
-        return matrixH;
-    }
-
-    public double[][] getSingleMatrixH(int index) {
-        return matrixH[index];
-    }
-
     public double[][][] getReversedJacobian() {
         return reversedJacobian;
     }
@@ -415,24 +381,8 @@ public class MatrixH {
         return jacobian;
     }
 
-    public double[][][] getMatrix_H_noBorderCondition() {
-        return matrix_H_noBorderCondition;
-    }
-
-    public double[][][] getLoad_vector_calculation_points() {
-        return load_vector_calculation_points;
-    }
-
-    public double[][][] getBorder_H_Array() {
-        return border_H_Array;
-    }
-
     public double[][] getGlobalMatrixH() {
         return globalMatrixH;
-    }
-
-    public double[][] getGlobalMatrixHnoBorderCondition() {
-        return globalMatrixHnoBorderCondition;
     }
 
     public double[] getGlobalLoadVector() {

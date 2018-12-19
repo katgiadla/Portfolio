@@ -17,11 +17,11 @@ public class TemperatureIteration {
     private double stepTime;
     private double initialTemperature;
 
-    public TemperatureIteration(double[][] globalMatrixH, double[][] globalMatrixHnoBorders, double[][] globalMatrixC, double[] load_vector ,GlobalData globalData) {
-        this.globalMatrixH = globalMatrixH;
-        this.globalMatrixC = globalMatrixC;
+    public TemperatureIteration(MatrixH matrixH, MatrixC matrixC ,GlobalData globalData) {
+        this.globalMatrixH = matrixH.getGlobalMatrixH();
+        this.globalMatrixC = matrixC.getGlobalMatrixC();
         this.globalData = globalData;
-        this.load_vector = load_vector;
+        this.load_vector = matrixH.getGlobalLoadVector();
 
         this.simulationTime = globalData.getSimulationTime();
         this.stepTime = globalData.getSimulationStepTime();
@@ -114,20 +114,5 @@ public class TemperatureIteration {
             input[i]=0;
         }
         return input;
-    }
-
-    private void print(double [] input){
-        for(int i =0;i<input.length;i++){
-            System.out.printf("%.6 \t",input[i]);
-        }
-    }
-
-    private void print(double[][] input){
-        for(int i =0;i<input.length;i++){
-            for(int j=0;j<input[0].length;j++){
-                System.out.printf("%.6f \t",input[i][j]);
-            }
-            System.out.println();
-        }
     }
 }

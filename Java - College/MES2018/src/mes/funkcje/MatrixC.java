@@ -9,10 +9,8 @@ public class MatrixC {
     double [][] detJ;
     double [][][]jacobian;
     double [][][]reversedJacobian;
-    double [] N1;
-    double [] N2;
-    double [] N3;
-    double [] N4;
+    double [] N1,N2,N3,N4;
+
 
     List<Element> importedElements;
     private double[][][][] shapeFunctionsPointsArray;
@@ -21,15 +19,15 @@ public class MatrixC {
 
     private GlobalData globalData;
 
-    public MatrixC(List<Element> importedElements, double[][] detJ, double[][][] jacobian, double[][][] reversedJacobian, double[] n1, double[] n2, double[] n3, double[] n4, GlobalData globalData) {
-        this.importedElements = importedElements;
-        this.detJ = detJ;
-        this.jacobian = jacobian;
-        this.reversedJacobian = reversedJacobian;
-        N1 = n1;
-        N2 = n2;
-        N3 = n3;
-        N4 = n4;
+    public MatrixC( Grid grid, MatrixH matrixH, Jacobian jakobian_2d, GlobalData globalData) {
+        this.importedElements = grid.getElementsCollection();
+        this.detJ = matrixH.getDetJ();
+        this.jacobian = matrixH.getJacobian();
+        this.reversedJacobian = matrixH.getReversedJacobian();
+        N1 = jakobian_2d.getN1();
+        N2 = jakobian_2d.getN2();
+        N3 = jakobian_2d.getN3();
+        N4 = jakobian_2d.getN4();
         shapeFunctionsPointsArray = new double[jacobian.length][4][4][4];
         matrixC = new double[jacobian.length][4][4];
         globalMatrixC = new double[globalData.getnH()*globalData.getnB()][globalData.getnB()*globalData.getnH()];
@@ -41,7 +39,6 @@ public class MatrixC {
         this.calculateCalculationPointsFromShapeFunctions();
         this.calculateMatrixC();
         this.calculateGlobalMatrixC();
-        //this.printMatrixC();
     }
 
     private void calculateCalculationPointsFromShapeFunctions(){
@@ -101,18 +98,6 @@ public class MatrixC {
             }
             System.out.println();
             System.out.println();*/
-        }
-    }
-
-    private void printMatrixC() {
-        for (int elementIndex = 0; elementIndex < matrixC.length; elementIndex++) {
-            System.out.println("element: "+(elementIndex+1));
-            for (int k = 0; k < matrixC[0].length; k++) {
-                for (int j = 0; j < matrixC[0][0].length; j++) {
-                    System.out.print(matrixC[elementIndex][k][j] + " ");
-                }
-                System.out.println();
-            }
         }
     }
 

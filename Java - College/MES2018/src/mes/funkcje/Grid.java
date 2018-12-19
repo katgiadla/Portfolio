@@ -9,11 +9,11 @@ public class Grid {
     private double deltaLength, deltaHeight, elementsIndex;
     private List<Element> elementsCollection;
 
-    public Grid(double length, double height, int amountNodesAtLengthOfGrid, int amountNodesAtHeightOfGrid) {
-        this.length = length;
-        this.height = height;
-        this.amountNodesAtLengthOfGrid = amountNodesAtLengthOfGrid;
-        this.amountNodesAtHeightOfGrid = amountNodesAtHeightOfGrid;
+    public Grid(  GlobalData globalData) {
+        this.length = globalData.getB();
+        this.height = globalData.getB();
+        this.amountNodesAtLengthOfGrid = globalData.getnB();
+        this.amountNodesAtHeightOfGrid = globalData.getnH();
         elementsAmount = (amountNodesAtHeightOfGrid -1)*(amountNodesAtLengthOfGrid -1);
         nodesAmount = amountNodesAtHeightOfGrid * amountNodesAtLengthOfGrid;
         elementsCollection = new LinkedList<>();
@@ -42,12 +42,10 @@ public class Grid {
                 elementsCollection.add(element);
             }
         }
-
     }
 
     private boolean checkIfBorderNode(double x, double y){
-        if(x - deltaLength<0   || x + deltaLength>length){return true;}
-        if(y - deltaHeight<0   || y + deltaHeight>height){return true;}
+        if(x - deltaLength<0   || x + deltaLength>length || y - deltaHeight<0   || y + deltaHeight>height){return true;}
         return false;
     }
 

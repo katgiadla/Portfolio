@@ -5,16 +5,23 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GlobalData {
     private HashMap<String,String> fileData;
-    private String path;
+    private String path,fileName;
     int nH,nB;
     private double initialTemperature,simulationTime,simulationStepTime,environmentTemperature, alfa    ,   H   ,   B   ,   individualHeat,conductivity,density;
+    private final String PATH = "C:\\AGH\\Portfolio\\Java - College\\MES2018\\src\\mes\\data\\";
+    Scanner scanner;
 
-    public GlobalData(String path) {
+    public GlobalData() {
+        scanner = new Scanner(System.in);
+        fileName = scanner.next();
+        scanner.close();
+
         fileData = new HashMap<>();
-        this.path = path;
+        this.path = PATH+fileName;
         this.extractDataFromFile(path);
         this.setAllDataFromFIle();
     }
@@ -99,52 +106,4 @@ public class GlobalData {
         return density;
     }
 
-
-    public void setnH(int nH) {
-        this.nH = nH;
-    }
-
-    public void setnB(int nB) {
-        this.nB = nB;
-    }
-
-    public void setInitialTemperature(double initialTemperature) {
-        this.initialTemperature = initialTemperature;
-    }
-
-    public void setSimulationTime(double simulationTime) {
-        this.simulationTime = simulationTime;
-    }
-
-    public void setSimulationStepTime(double simulationStepTime) {
-        this.simulationStepTime = simulationStepTime;
-    }
-
-    public void setEnvironmentTemperature(double environmentTemperature) {
-        this.environmentTemperature = environmentTemperature;
-    }
-
-    public void setAlfa(double alfa) {
-        this.alfa = alfa;
-    }
-
-    public void setH(double h) {
-        H = h;
-    }
-
-    public void setB(double b) {
-        B = b;
-    }
-
-    public void setIndividualHeat(double individualHeat) {
-        this.individualHeat = individualHeat;
-    }
-
-    public void setConductivity(double conductivity) {
-        this.conductivity = conductivity;
-    }
-
-    public void setDensity(double density) {
-        this.density = density;
-    }
 }

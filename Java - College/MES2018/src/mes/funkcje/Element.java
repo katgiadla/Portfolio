@@ -5,8 +5,8 @@ public class Element {
     private final double KSI = 1.0 / Math.sqrt(3);
 
     private int element_ID;
-    private int[] nodes_ID = new int[4];
-    private Node[] nodes = new Node[4];
+    private int[] nodes_ID;
+    private Node[] nodes;
     private boolean[] borders_ID = new boolean[4];
     private double [] borders_length = new double[4];
 
@@ -47,35 +47,8 @@ public class Element {
         }
     }
 
-    public void setNodes_ID(int[] nodes_ID) {
-        this.nodes_ID = nodes_ID;
-    }
-
-    public void setBorders_ID(boolean[] borders_ID) {
-        this.borders_ID = borders_ID;
-    }
-
-    public int[] getNodes_ID() {
-        return nodes_ID;
-    }
-
-    public void setNode_ID(int index, int id){
-        nodes_ID[index]=id;}
-
-    public boolean[] getBorders_ID() {
-        return borders_ID;
-    }
-
-    public int getElement_ID() {
-        return element_ID;
-    }
-
     public Node[] getNodes() {
         return nodes;
-    }
-
-    public void setNodes(Node[] nodes) {
-        this.nodes = nodes;
     }
 
     public Node getNode1()
@@ -115,10 +88,6 @@ public class Element {
     public double getEdge3(){return borders_length[2];
     }
     public double getEdge4(){return borders_length[3];
-    }
-
-    public double[] getBorders_length() {
-        return borders_length;
     }
 
     public Local2D[] getLocal_2D_Calculation_Points() {
