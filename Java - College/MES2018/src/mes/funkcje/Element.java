@@ -1,7 +1,5 @@
 package mes.funkcje;
 
-import java.util.Arrays;
-
 public class Element {
 
     private final double KSI = 1.0 / Math.sqrt(3);

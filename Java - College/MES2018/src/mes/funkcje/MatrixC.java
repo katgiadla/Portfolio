@@ -71,7 +71,6 @@ public class MatrixC {
         }
     }
 
-
     private void calculateGlobalMatrixC() {
         for(int i=0;i<globalMatrixC.length;i++){
             for(int j=0;j<globalMatrixC[0].length;j++){
@@ -103,8 +102,6 @@ public class MatrixC {
             System.out.println();
             System.out.println();*/
         }
-
-
     }
 
     private void printMatrixC() {

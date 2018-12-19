@@ -191,18 +191,6 @@ public class Jacobian {
         return jakobian;
     }
 
-    public double[] getSingleDetJ(int index){
-        return detJ[index];
-    }
-
-    public double[][] getSingleReversedDetJ(int index){
-        return reversedDetJ[index];
-    }
-
-    public double[][] getSingleJacobian(int index){
-        return jakobian[index];
-    }
-
     public double[] getN1() {
         return N1;
     }
@@ -219,16 +207,3 @@ public class Jacobian {
         return N4;
     }
 }
-
-/*
-zadania teorii plynow
-te same rownania
-
-rwnania teorii plastycznosci
-
-
-przemiesczenie rozniczkujemy wzgledem czasu - predkosc
-pochodna predkosci wzgledem x
-
-
- */

@@ -11,7 +11,6 @@ public class GlobalData {
     private String path;
     int nH,nB;
     private double initialTemperature,simulationTime,simulationStepTime,environmentTemperature, alfa    ,   H   ,   B   ,   individualHeat,conductivity,density;
-    //                  100*C             500 s         50s                 1200*C          300W/m^2K       0,1m    0,1m    700 J/kg*C      25 W/m*C    7800 kg/m^3
 
     public GlobalData(String path) {
         fileData = new HashMap<>();

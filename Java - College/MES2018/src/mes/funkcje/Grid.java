@@ -51,44 +51,7 @@ public class Grid {
         return false;
     }
 
-
-    public void print(List<?> inputObject) {
-        int index = 0;
-        for (Object element : inputObject) {
-            System.out.println((index + 1) + "\n" + element.toString());
-            index++;
-        }
-    }
-
     public List<Element> getElementsCollection() {
         return elementsCollection;
     }
 }
-
-/*private void createGrid(){
-        elementsIndex = 0;
-        for(int x = 0; x< amountNodesAtLengthOfGrid -1; x++){
-            for(int y = 0; y< amountNodesAtHeightOfGrid -1; y++){
-
-                int xPattern = x* length /(amountNodesAtLengthOfGrid -1);
-                int yPattern = y* height /(amountNodesAtHeightOfGrid -1);
-
-                Node [] tmp = {new Node(,xPattern,                   yPattern               ,xPattern + yPattern 20,this.checkIfBorderNode(x,y)),
-        new Node(,xPattern+ deltaLength,   yPattern               ,xPattern + deltaLength + yPattern 20,),
-        new Node(,xPattern+ deltaLength,yPattern+ deltaHeight  ,xPattern + deltaLength + yPattern + deltaHeight 20,),
-        new Node(,xPattern,                yPattern+ deltaHeight  ,xPattern + yPattern + deltaHeight 20,)};*/
-
-       /* Element exampleElement = new Element(elementsIndex+1,tmp,);
-                /*exampleElement.setNodes(
-
-                );*/
-       /* elementsCollection.add(exampleElement);
-        elementsIndex++;
-        }
-        }
-        this.collectNodes();
-        }
-
-
-
-*/

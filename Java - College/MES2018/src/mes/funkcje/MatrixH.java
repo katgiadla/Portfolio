@@ -35,13 +35,8 @@ public class MatrixH {
     private double [] [] load_vector_elements;
     private double [] globalLoadVector;
 
-
     List<Element> importedElements;
     private double[][][] border_H_Array;
-
-
-    private double [][] nextStepTemperature;
-     //edgeCalculationPoints = new Local2D[8];
 
     private GlobalData globalData;
 
@@ -351,7 +346,6 @@ public class MatrixH {
         }
     }
 
-
     private double[][] calculateGlobalMatrixH(double[][][] inputMatrix) {
         double[][] localGlobalArray = new double[globalData.getnB()*globalData.getnH()][globalData.getnH()*globalData.getnB()];
         for(int i=0;i<localGlobalArray.length;i++){
@@ -385,7 +379,6 @@ public class MatrixH {
             System.out.println();*/
         }
             //System.out.println(globalMatrixH.length+" "+ globalMatrixH[0].length);
-
 
         return localGlobalArray;
     }
@@ -446,15 +439,3 @@ public class MatrixH {
         return globalLoadVector;
     }
 }
-
-/**
- * temp. skalarem jest
- * mamy uklad rownan za kazdy uklad odpowiada 1 wartosc 1 temperatuja
- * jak zaczynamy mechanike to do tych wezlow, w tych wezlach mamy ile zmiennych -
- *
- *
- * 1 strona opisu, jaka metoda itp. , opis programu
- *
- *
- * rownanie z macierzy H jest odpowiada za rozwiazanie konkretnej temperatury w 1 wezle
- */

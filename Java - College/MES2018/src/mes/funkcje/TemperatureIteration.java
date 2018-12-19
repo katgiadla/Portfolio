@@ -88,7 +88,7 @@ public class TemperatureIteration {
             //P_Iteration[i]= -P_Iteration[i];
             //System.out.print(P_Iteration[i]+" ");
         }
-        System.out.println();
+        //System.out.println();
         return P_Iteration;
     }
 
@@ -99,7 +99,7 @@ public class TemperatureIteration {
             if(temp[i]<min) min = temp[i];
         }
 
-        System.out.println("Step  "+step+" "+min+" "+max);
+        System.out.println(/*"Step  "+step+" "+min+" "+*/max);
     }
 
     private double [] calculateTemperature(double value){
