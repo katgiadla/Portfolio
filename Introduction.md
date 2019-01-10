@@ -19,7 +19,5 @@ Job offers collector: <br />
 <br/>
 Dictionary<br/>
 <ul>
-	<li>Vocabulary collection, similar to anki<li/>
-	
-	
+	<li>Vocabulary collection <li/>
 </ul>
