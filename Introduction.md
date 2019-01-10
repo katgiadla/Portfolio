@@ -19,5 +19,5 @@ Job offers collector: <br />
 <br/>
 Dictionary<br/>
 <ul>
-	<li>Vocabulary collection <li/>
+	<li>Vocabulary collection </li>
 </ul>
