@@ -1,5 +1,8 @@
 # Projects 
-All java projects created in the 2018. <br /> 
+All projects I have done so far <br /> 
+
+<br/>
+My college  java reposiory for further informations<br/>
 https://github.com/Tchorson/Java_GCL07_lato_2018_Mateusz_Tchorek <br /> 
 
 
