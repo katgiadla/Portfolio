@@ -35,7 +35,6 @@ public class connectionProperties {
             Pattern pattern = Pattern.compile("\"(.*?)\"");
             Matcher matcher = pattern.matcher(element.split(":")[1]);
             if(matcher.find()) return matcher.group(1).toString();
-            //return pattern.matcher(element.split(":")[1]).toString();
             else return null;
         }catch(FileNotFoundException e){
             throw new FileNotFoundException("The password file has not been included in github");
