@@ -8,6 +8,7 @@ import com.google.gson.stream.JsonReader;
 import com.mongodb.MongoClientURI;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.regex.Matcher;
@@ -27,18 +28,22 @@ public class connectionProperties {
     }
 
     private String importPassword() throws FileNotFoundException{
-
         try {
             BufferedReader br = new BufferedReader(new FileReader("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\sensitive\\password.json"));
             JsonParser parser = new JsonParser();
-            String element = parser.parse(br).toString();//note getAsString() throws  "java.lang.UnsupportedOperationException: JsonObject"
-            Pattern pattern = Pattern.compile("\"(.*?)\"");
-            Matcher matcher = pattern.matcher(element.split(":")[1]);
-            if(matcher.find()) return matcher.group(1).toString();
-            else return null;
-        }catch(FileNotFoundException e){
+            String password = regexJava(parser.parse(br).toString());
+            br.close();
+            return password;
+        }catch(java.io.IOException e){
             throw new FileNotFoundException("The password file has not been included in github");
         }
+    }
+
+    private String regexJava(String inputString /*,inputRegex*/){
+            Pattern pattern = Pattern.compile("\"(.*?)\"");
+            Matcher matcher = pattern.matcher(inputString.split(":")[1]);
+            if(matcher.find()) return matcher.group(1).toString();
+            else return null;
     }
 
     public static void main(String[] args) throws FileNotFoundException {
