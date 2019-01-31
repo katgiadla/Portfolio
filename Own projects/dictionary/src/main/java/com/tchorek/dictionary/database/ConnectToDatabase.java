@@ -12,7 +12,7 @@ public class ConnectToDatabase {
     private MongoClient mongoClient;
 
     public ConnectToDatabase() {
-        inputPassword = new importPassword().getPassword();
+        inputPassword = new ImportPasswordFromJson().importPassword("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\sensitive\\","password.json");
         uri = connectToDB(inputPassword);
         mongoClient = new MongoClient(uri);
     }

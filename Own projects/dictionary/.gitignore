@@ -25,4 +25,4 @@
 /build/
 
 ### Sensitive Data ###
-password.json
+sensitive/
