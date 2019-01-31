@@ -1,46 +1,18 @@
-package com.tchorek.dictionary.data;
+package com.tchorek.dictionary.database;
 
 import com.google.gson.JsonParser;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.FindIterable;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class connectionProperties {
+public class importPassword {
 
-    private String inputPassword;
+    private String password;
 
-    private MongoClientURI uri;
-    private MongoClient mongoClient;
-    FindIterable<Document> doc;
-
-    public connectionProperties() throws FileNotFoundException {
-        inputPassword = importPassword();
-        uri = connectToDB(inputPassword);
-        mongoClient = new MongoClient(uri);
-        doc = getAllObjects();
-
-    }
-
-    private FindIterable<Document> getAllObjects(){
-        return mongoClient.getDatabase("Dictionary").getCollection("Vocabulary").find();
-    }
-
-    public static void main(String[] args) throws FileNotFoundException {
-        connectionProperties connectionProperties = new connectionProperties();
-
-    }
-
-    private MongoClientURI connectToDB(String inputPassword) {
-        return new MongoClientURI(
-                "mongodb+srv://mtchorek:" + inputPassword + "@information-collections-mz7lu.mongodb.net/test?retryWrites=true"
-        );
+    public importPassword(){
+       password = importPassword();
     }
 
     private String importPassword() {
@@ -75,5 +47,9 @@ public class connectionProperties {
         Matcher matcher = pattern.matcher(inputString.split(":")[1]);
         if (matcher.find()) return matcher.group(1).toString();
         else return null;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
