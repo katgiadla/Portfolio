@@ -22,5 +22,6 @@ Job offers collector: <br />
 <br/>
 Dictionary<br/>
 <ul>
-	<li>Vocabulary collection </li>
+	<li>Spring rest API </li>
+	<li>Json data exchange through Gson library</li>
 </ul>
