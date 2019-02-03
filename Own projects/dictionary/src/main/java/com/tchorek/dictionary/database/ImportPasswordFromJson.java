@@ -13,15 +13,16 @@ public class ImportPasswordFromJson {
     public ImportPasswordFromJson(){
     }
 
-    public String importPassword(String inputPath,String inputFileName) {
+    public String importPassword(String inputPath,String inputFileName) throws FileNotFoundException {
         final String PATH = inputPath;
         String passwodFileName = inputFileName;
 
         BufferedReader br = null;
-        try {
-            if (!new File(PATH + passwodFileName).exists())
-                throw new FileNotFoundException("The password file has not been found");
 
+        if (!new File(PATH + passwodFileName).exists())
+            throw new FileNotFoundException("The password file has not been found");
+
+        try {
             Gson gson = new Gson();
             br = new BufferedReader(new FileReader(PATH + passwodFileName));
 
@@ -30,7 +31,7 @@ public class ImportPasswordFromJson {
             e.printStackTrace();
         } finally {
             try {
-                br.close();
+                if(br!=null) br.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

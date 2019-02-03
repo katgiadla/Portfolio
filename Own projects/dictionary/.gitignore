@@ -1,6 +1,8 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
+
+
 ### STS ###
 .apt_generated
 .classpath
@@ -10,11 +12,15 @@
 .springBeans
 .sts4-cache
 
+
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
+
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -24,5 +30,10 @@
 /.nb-gradle/
 /build/
 
+
+
 ### Sensitive Data ###
-sensitive/
+db_access/
+/db_access/
+*.json
+

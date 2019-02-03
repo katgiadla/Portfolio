@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+    <link rel="stylesheet" th:href="@{/assets/css/index.css}"/>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th th:text="word"></th>
+        <th th:text="translation"></th>
+        <th th:text="language"></th>
+    </tr>
+    <tr th:each="vocabulary : ${vocabulary}">
+        <td th:text="${vocabulary.word + '    '}">word</td>
+        <td th:text="${vocabulary.translation + '    '}">translation</td>
+        <td th:text="${vocabulary.language + '    '}">language</td>
+    </tr>
+</table>
+    <form th:action="@{/}" method="post">
+    <input type="text" th:id="inputWord" name="inputWord" />
+    <input type="text" th:id="inputTranslation" name="inputTranslation" />
+    <input type="text" th:id="language" name="language" value="English" />
+    <input type="submit" th:id="addWord" value="add" />
+    </form>
+<br/>
+    <form th:action="@{/delete}" method="post">
+    <input type="text" th:id="inputWordDelete" name="inputWordDelete" />
+    <input type="text" th:id="inputTranslationDelete" name="inputTranslationDelete" />
+    <input type="text" th:id="languageDelete" name="languageDelete" />
+    <input type="submit" th:id="deleteWord" value="delete" />
+    </form>
+<h4>version 1.2.0</h4>
+</body>
+</html>

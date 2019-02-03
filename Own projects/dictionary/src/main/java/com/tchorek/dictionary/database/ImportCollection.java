@@ -11,7 +11,7 @@ public class ImportCollection {
     private FindIterable<Document> doc;
     private MongoClient mongoClient;
 
-    public ImportCollection() {
+    public ImportCollection() throws FileNotFoundException {
         mongoClient = new ConnectToDatabase().getMongoClient();
         doc = getAllObjects();
     }

@@ -1,53 +1,44 @@
 package com.tchorek.dictionary.database;
 
-import org.junit.*;
-
 import java.io.FileNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 
 class ImportPasswordFromJsoNTest {
     ImportPasswordFromJson importPasswordFromJson;
     String expectedPassword;
+    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
 
-    @BeforeClass
+    @BeforeEach
     public void setUpClass(){
         importPasswordFromJson = new ImportPasswordFromJson();
     }
 
-    @Before
-    public void setUp(){
-
+    @Test
+    public void testImportPasswordSuccess() throws FileNotFoundException {
+        expectedPassword =importPasswordFromJson.importPassword(PATH,"data2.json");
+        assertEquals(expectedPassword,"FakePassword");
     }
 
     @Test
-    public void testImportPasswordSuccess(){
-         expectedPassword = importPasswordFromJson.importPassword("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\sensitive\\","password.json");
-        assertEquals(expectedPassword,"admin");
-    }
-
-    @Test
-    public void testImportPasswordFailure(){
+    public void testImportPasswordFailure() throws FileNotFoundException {
         assertNotEquals(
-            importPasswordFromJson.importPassword("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\sensitive\\","password2.json"),"admin");
+            importPasswordFromJson.importPassword(PATH,"data1.json"),"FakePassword");
     }
 
     @Test
     public void testImportPasswordException(){
         assertThrows(FileNotFoundException.class, ()->{
-            importPasswordFromJson.importPassword("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\sensitive\\","password3.json");
-        } );
-    }
-
-    @After
-    public void tearDown(){
+            importPasswordFromJson.importPassword(PATH,"NotExistingFile.json"); } );
+        assertThrows(FileNotFoundException.class, ()->{
+            importPasswordFromJson.importPassword("NoPathToFile","password3.json"); } );
 
     }
 
-    @AfterClass
+    @AfterEach
     public void tearDownClass(){
         importPasswordFromJson = null;
     }
