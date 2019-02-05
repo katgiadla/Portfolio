@@ -90,7 +90,8 @@ You can also include multiple translations like this: <br/> <br/>
 | Word  | Meaning1/Meaning2| German   |
 
 <br/>
-This will divide the translation and add the same word with each diffirent meaning to the vocabulary table.
+This will divide the translation and add the same word with each diffirent meaning to the vocabulary table.<br/>
+
 [Restrictions](#Restrictions)
 
 ```diff
