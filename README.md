@@ -1,8 +1,8 @@
 # Introduction 
 In this repository are and will be kept every projects created by me from scratch. 
 
-[Top](#Top)
-<a name="Bottom"></a>
+[Go Bottom](#GoBottom)
+<a name="GoTop"></a>
 
 
 ###### Todo 
@@ -91,8 +91,7 @@ You can also include multiple translations like this: <br/> <br/>
 
 <br/>
 This will divide the translation and add the same word with each diffirent meaning to the vocabulary table.
-<a name="restrictions"></a>
-
+[Restrictions](#Restrictions)
 
 ```diff
 - Warning
@@ -107,7 +106,8 @@ If you feel you no longer need that certain word you can remove it by putting da
 
 #### Restrictions
 
-[Restrictions](#restrictions)
+<a name="GoBottom"></a>
+
 <br/>
 In order to get rid of the 'unremoveable' objects the text inputs should be filled in following pattern: <br/>
 <br/>
@@ -121,5 +121,5 @@ In order to get rid of the 'unremoveable' objects the text inputs should be fill
 - "Delete" is a compulsory word, without this the undeletable word cannot be removed.
 It will put force delete request that will remove inconvenient word. 
 
-<a name="Top"></a>
-[Bottom](#Bottom)
+<a name="GoBottom"></a>
+[Go Top](#GoTop)
