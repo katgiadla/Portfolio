@@ -1,6 +1,9 @@
 # Introduction 
 In this repository are and will be kept every projects created by me from scratch. 
 
+[Top](#Top)
+<a name="Bottom">Bottom</a>
+
 
 ###### Todo 
 Javascript <br /> 
@@ -28,8 +31,7 @@ Job offers collector
 
 <ul>
 	<li>Local MySQL server</li>
-</ul
-
+</ul>
 <br/>
 <br/>
 
@@ -37,6 +39,7 @@ Dictionary
 ======
 
 #### Description:
+
 <ul>
 	<li>Spring rest API </li>
 	<li>MongoDB Atlas database </li>
@@ -59,7 +62,6 @@ Dictionary
 }
 ```
 
-
 <li> In ConnectToDatabase class alter connectToDB() method return string to your own database url <br/></li>
 </ul>
 <br/>
@@ -73,23 +75,52 @@ The page consists of 2 sections: <br/>
 <br/>
 <br/>
 Each service has 3 text inputs which should be fulfilled in the following order: <br/>
+<br/>
 
 | Word  | Translation | Language |
 | ----- | ----------- | -------- |
 | Buy   | Kaufen      | German   |
 
-If you feel you no longer need that certain word you can remove it by putting data in the same order in the row below.
 <br/>
+<br/>
+You can also include multiple translations like this: <br/> <br/>
+
+| Word  | Translation      | Language |
+| ----- | ---------------- | -------- |
+| Word  | Meaning1/Meaning2| German   |
+
+<br/>
+This will divide the translation and add the same word with each diffirent meaning to the vocabulary table.
+
 <br/>
 
+```diff
+- Warning
+Incorrect translation formula will cause problems. 
+```
+<a name="restrictions">Restrictions</a>
+
+<br/>
+<br/>
+If you feel you no longer need that certain word you can remove it by putting data in the same order in the row below but only for the one word-translation case!
+<br/>
+<br/>
 
 #### Restrictions
-Adding multiple translations may cause the words in database are unable to delete in a simply way. <br/>
-In that text inputs should be filled in following pattern: <br/>
+
+[Restrictions](#restrictions)
+<br/>
+In order to get rid of the 'unremoveable' objects the text inputs should be filled in following pattern: <br/>
+<br/>
 
 | Word  | Translation | Language |
 | ----- | ----------- | -------- |
 | Buy   | Kaufen      | Delete   |
 
+<br/>
+<br/>
 - "Delete" is a compulsory word, without this the undeletable word cannot be removed.
-It will put force delete request that will remove inconvenient word.
+It will put force delete request that will remove inconvenient word. 
+
+<a name="Top">Top</a>
+[Bottom](#Bottom)
