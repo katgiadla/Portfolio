@@ -2,43 +2,43 @@ package com.tchorek.dictionary.controller;
 
 import com.tchorek.dictionary.database.*;
 import com.tchorek.dictionary.properties.NoValueException;
-import org.bson.Document;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.FileNotFoundException;
-
+import javax.annotation.PreDestroy;
 
 @Controller
 @Component
-public class DictionaryController implements InitializingBean {
+public class DictionaryController{
+
+    private final ImportVocabularyCollection importCollection;
+
+    private final SendWord sendWord;
+
+    private final CreateJson createJson;
+
+    private final ConnectToDatabase connectToDatabase;
+
+    private final DeleteWord deleteWord;
 
     @Autowired
-    private ImportVocabularyCollection importCollection;
+    public DictionaryController(SendWord sendWord, CreateJson createJson, ConnectToDatabase connectToDatabase, DeleteWord deleteWord) {
+        this.sendWord = sendWord;
+        this.createJson = createJson;
+        this.connectToDatabase = connectToDatabase;
+        this.deleteWord = deleteWord;
+        this.importCollection = new ImportVocabularyCollection(this.connectToDatabase.getMongoClient());
+    }
 
-    @Autowired
-    private SendWord sendWord;
-
-    @Autowired
-    private CreateJson createJson;
-
-    @Autowired
-    private ConnectToDatabase connectToDatabase;
-
-    @Autowired
-    private DeleteWord deleteWord;
-
-    @Override
-    public void afterPropertiesSet() throws FileNotFoundException {
-        connectToDatabase = new ConnectToDatabase();
-        importCollection = new ImportVocabularyCollection(connectToDatabase.getMongoClient());
-        createJson = new CreateJson();
-        sendWord = new SendWord();
-        deleteWord = new DeleteWord();
+    @PreDestroy
+    public void closeAllStreams(){
+        try{
+          if(!connectToDatabase.getMongoClient().isLocked())connectToDatabase.getMongoClient().close();
+        } catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     @GetMapping("/")
