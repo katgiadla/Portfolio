@@ -2,6 +2,7 @@ package com.tchorek.dictionary.controller;
 
 import com.tchorek.dictionary.database.*;
 import com.tchorek.dictionary.properties.NoValueException;
+import org.bson.Document;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,7 +21,7 @@ public class DictionaryController implements InitializingBean {
     private ImportVocabularyCollection importCollection;
 
     @Autowired
-    private SendWord sendJson;
+    private SendWord sendWord;
 
     @Autowired
     private CreateJson createJson;
@@ -36,7 +37,7 @@ public class DictionaryController implements InitializingBean {
         connectToDatabase = new ConnectToDatabase();
         importCollection = new ImportVocabularyCollection(connectToDatabase.getMongoClient());
         createJson = new CreateJson();
-        sendJson = new SendWord();
+        sendWord = new SendWord();
         deleteWord = new DeleteWord();
     }
 
@@ -49,8 +50,15 @@ public class DictionaryController implements InitializingBean {
     @PostMapping("/")
     public String sendWord(Model model, @RequestParam("inputWord") String inputWord, @RequestParam("inputTranslation") String inputTranslation, @RequestParam("language") String language) {
         try {
-            createJson.createDocument(inputWord, inputTranslation, language);
-            sendJson.sendFile(connectToDatabase.getMongoClient(), createJson.getDoc());
+            if(inputTranslation.contains("/")){
+                String [] translationArray = inputTranslation.split("/");
+                createJson.createDocument(inputWord,translationArray,language);
+                sendWord.sendFile(connectToDatabase.getMongoClient(),createJson.getDoc());
+            }
+            else {
+                createJson.createDocument(inputWord, new String[]{inputTranslation}, language);
+                sendWord.sendFile(connectToDatabase.getMongoClient(), createJson.getDoc());
+            }
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
             return "index";
         }catch (NoValueException e){
@@ -63,8 +71,8 @@ public class DictionaryController implements InitializingBean {
     public String deleteWord(Model model, @RequestParam("inputWordDelete") String inputWord, @RequestParam("inputTranslationDelete") String inputTranslation, @RequestParam("languageDelete") String language)  {
 
         try {
-            createJson.createDocument(inputWord, inputTranslation, language);
-            deleteWord.deleteFile(connectToDatabase.getMongoClient(), createJson.getDoc());
+            createJson.createDocument(inputWord, new String[]{inputTranslation}, language);
+            deleteWord.deleteFile(connectToDatabase.getMongoClient(), createJson.getDoc()[0]);
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
 
             return "index";

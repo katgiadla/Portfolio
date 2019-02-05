@@ -7,8 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class SendWord {
 
-    public void sendFile(MongoClient mongoClient,Document doc){
-        if(mongoClient.getDatabase("Dictionary").getCollection("Vocabulary").countDocuments(doc)>0) return;
-        mongoClient.getDatabase("Dictionary").getCollection("Vocabulary").insertOne(doc);
+    public void sendFile(MongoClient mongoClient,Document documentArray[]) {
+        for (Document document : documentArray) {
+            if (mongoClient.getDatabase("Dictionary").getCollection("Vocabulary").countDocuments(document) > 0) return;
+            mongoClient.getDatabase("Dictionary").getCollection("Vocabulary").insertOne(document);
+        }
     }
 }

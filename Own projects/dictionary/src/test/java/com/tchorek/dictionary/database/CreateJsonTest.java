@@ -21,8 +21,8 @@ class CreateJsonTest {
 
     @Test
     public void createJsonTestSuccess() throws NoValueException {
-        createJson.createDocument("Commissioned","Upoważniony","English");
-        Document doc = createJson.getDoc();
+        createJson.createDocument("Commissioned",new String[]{"Upoważniony"},"English");
+        Document doc = createJson.getDoc()[0];
         assertEquals(doc.get("word"),"Commissioned");
         assertEquals(doc.get("translation"),"Upoważniony");
         assertEquals(doc.get("Language"),"English");
@@ -30,13 +30,13 @@ class CreateJsonTest {
 
     @Test
     public void createJsonTestFailure() throws NoValueException {
-        createJson.createDocument("","","");
+        createJson.createDocument("",new String[]{""},"");
         assertThrows(NoValueException.class, ()-> { createJson.getDoc();});
-        createJson.createDocument("Black","","English");
+        createJson.createDocument("Black",new String[]{""},"English");
         assertThrows(NoValueException.class, ()-> { createJson.getDoc();});
-        createJson.createDocument("","Czarny","English");
+        createJson.createDocument("",new String[]{"Czarny"},"English");
         assertThrows(NoValueException.class, ()-> { createJson.getDoc();});
-        createJson.createDocument("Black","Czarny","");
+        createJson.createDocument("Black",new String[]{"Czarny"},"");
         assertThrows(NoValueException.class, ()-> { createJson.getDoc();});
     }
 
