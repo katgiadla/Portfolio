@@ -1,5 +1,6 @@
 package com.tchorek.dictionary.controller;
 
+import com.mongodb.MongoSocketReadException;
 import com.tchorek.dictionary.database.*;
 import com.tchorek.dictionary.properties.NoValueException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,7 +77,7 @@ public class DictionaryController{
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
 
             return "index";
-        }catch (NoValueException e){
+        }catch (NoValueException | MongoSocketReadException e ){
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
             return "index";
         }

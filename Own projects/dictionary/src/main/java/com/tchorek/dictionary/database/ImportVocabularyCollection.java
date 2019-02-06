@@ -6,7 +6,6 @@ import com.tchorek.dictionary.model.Vocabulary;
 import org.bson.Document;
 import org.springframework.stereotype.Component;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 @Component
@@ -16,7 +15,7 @@ public class ImportVocabularyCollection {
     private MongoClient mongoClient;
     private ArrayList<Vocabulary> vocabulary = new ArrayList<>();
 
-    public ImportVocabularyCollection(MongoClient mongoClient) throws FileNotFoundException {
+    public ImportVocabularyCollection(MongoClient mongoClient){
         this.mongoClient = mongoClient;
         this.checkAndGetDatabaseCollection();
     }

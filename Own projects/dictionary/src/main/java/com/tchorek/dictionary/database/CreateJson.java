@@ -20,15 +20,15 @@ public class CreateJson {
 
     private String formatWord(String input) throws NoValueException {
         checkIfNoEmptyValue(input);
-        return input.substring(0,1).toUpperCase()+input.substring(1).toLowerCase();
+        return input.replaceAll("\\s+","").substring(0,1).toUpperCase()+input.replaceAll("\\s+","").substring(1).toLowerCase();
     }
 
     private void checkIfNoEmptyValue(String suspicious)throws NoValueException {
-        if(suspicious.equals("") || suspicious.equals(null))throw new NoValueException("Lack of String in checkIfNoEmptyValue");
+        if(suspicious.equals("") )throw new NoValueException("Lack of String in checkIfNoEmptyValue");
     }
 
         private void checkIfNoEmptyValue(int index)throws NoValueException{
-        if(doc[index].get("word").equals("")||doc[index].get("translation").equals("")||doc[index].get("Language").equals("")||doc[index].get("word").equals(null)||doc[index].get("translation").equals(null)||doc[index].get("Language").equals(null))throw new NoValueException("Lack of a certain value in index: "+index);
+        if(doc[index].get("word").equals("")||doc[index].get("translation").equals("")||doc[index].get("Language").equals(""))throw new NoValueException("Lack of a certain value in index: "+index);
     }
 
     public Document[] getDoc() throws NoValueException{

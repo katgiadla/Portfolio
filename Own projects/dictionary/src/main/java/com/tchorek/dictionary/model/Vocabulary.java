@@ -14,13 +14,6 @@ public class Vocabulary {
         language =  doc.getString("Language");
     }
 
-    public Vocabulary(){
-        _id="-1";
-        word="none";
-        translation="none";
-        language="unknown";
-    }
-
     public String get_id() {
         return _id;
     }
