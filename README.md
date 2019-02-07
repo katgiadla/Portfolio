@@ -34,8 +34,6 @@ Job offers collector
 <ul>
 	<li>Local MySQL server</li>
 </ul>
-<br/>
-<br/>
 
 Dictionary 
 ======
@@ -66,7 +64,6 @@ Dictionary
 
 <li> In ConnectToDatabase class alter connectToDB() method return string to your own database url <br/></li>
 </ul>
-<br/>
 
 #### Usage
 The page consists of 2 sections: <br/>
@@ -75,17 +72,18 @@ The page consists of 2 sections: <br/>
 	- Remove vocabulary service <br/>
 - Vocabulary table
 <br/>
-<br/>
-Each service has 3 text inputs which should be fulfilled in the following order: <br/>
-<br/>
+Each service has 3 text inputs which should be fulfilled in the following order: 
+
 
 | Word  | Translation | Language |
 | ----- | ----------- | -------- |
 | Buy   | Kaufen      | German   |
 
 <br/>
+If you feel you no longer need that word you can remove it by putting previous data in the same order in three text inputs below.  
+
 <br/>
-You can also include multiple translations like this: <br/> <br/>
+You can also include multiple translations like this: <br/> 
 
 | Word  | Translation      | Language |
 | ----- | ---------------- | -------- |
@@ -94,35 +92,39 @@ You can also include multiple translations like this: <br/> <br/>
 <br/>
 This will divide the translation and add the same word with each diffirent meaning to the vocabulary table.<br/>
 
-[Restrictions](#Restrictions)
-
 ```diff
-- Warning
-Incorrect translation formula will cause problems. 
+- Warning 
+Deleting multi translation does not work yet. 
+Adding spaces spaces between slash in formula above will cause problems.
 ```
 
 <br/>
+
+You can also add idioms or other multi-words with multi-word translations but each needs to be separated with underscore or dash like this:
+
+| Word  | Translation      | Language |
+| ----- | ---------------- | -------- |
+| Break_a_leg  | Good-luck | German   |
+
 <br/>
-If you feel you no longer need that certain word you can remove it by putting data in the same order in the row below but only for the one word-translation case!
-<br/>
+Otherwise you will get an hard-to-read text.
 <br/>
 
 #### Restrictions
-
 <a name="GoBottom"></a>
-
 <br/>
-In order to get rid of the 'unremoveable' objects the text inputs should be filled in following pattern: <br/>
-<br/>
+In order to dispose of the 'unremoveable' follow the pattern: <br/>
 
 | Word  | Translation | Language |
 | ----- | ----------- | -------- |
 | Buy   | Kaufen      | Delete   |
 
 <br/>
-<br/>
-- "Delete" is a compulsory word, without this the undeletable word cannot be removed.
-It will put force delete request that will remove inconvenient word. 
+
+```diff
+- Warning
+It deletes the first met word, may result in deleting the one with diffirent translation. Needs to be fixed. 
+```
 
 <a name="GoBottom"></a>
 [Go Top](#GoTop)
