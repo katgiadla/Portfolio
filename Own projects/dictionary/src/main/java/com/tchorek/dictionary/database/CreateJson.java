@@ -20,7 +20,7 @@ public class CreateJson {
 
     private String formatWord(String input) throws NoValueException {
         checkIfNoEmptyValue(input);
-        return input.replaceAll("\\s+","").substring(0,1).toUpperCase()+input.replaceAll("\\s+","").substring(1).toLowerCase();
+        return input.replaceAll("\\s+","").substring(0,1).toUpperCase()+input.replaceAll("\\s+","").substring(1).toLowerCase().replaceAll("\\_+"," ").replaceAll("\\-+"," ");
     }
 
     private void checkIfNoEmptyValue(String suspicious)throws NoValueException {
