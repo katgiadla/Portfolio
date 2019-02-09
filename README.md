@@ -36,7 +36,7 @@ Job offers collector
 </ul>
 
 Dictionary <br>
-Note: The project is just for my personal needs, I will improve the project later
+Note: The project is just for my personal needs, I will improve it later
 ======
 
 #### Description:
