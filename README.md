@@ -35,7 +35,7 @@ Job offers collector
 	<li>Local MySQL server</li>
 </ul>
 
-Dictionary
+Dictionary <br>
 Note: The project is just for my personal needs, I will improve the project later
 ======
 
