@@ -35,7 +35,8 @@ Job offers collector
 	<li>Local MySQL server</li>
 </ul>
 
-Dictionary 
+Dictionary <br>
+Note: The project is just for my personal needs, I will improve it later
 ======
 
 #### Description:
@@ -83,6 +84,12 @@ Each service has 3 text inputs which should be fulfilled in the following order:
 If you feel you no longer need that word you can remove it by putting previous data in the same order in three text inputs below.  
 
 <br/>
+
+```diff
++ To improve
+```
+
+<br>
 You can also include multiple translations like this: <br/> 
 
 | Word  | Translation      | Language |
