@@ -51,8 +51,8 @@ public class DictionaryController{
     @PostMapping("/")
     public String sendWord(Model model, @RequestParam("inputWord") String inputWord, @RequestParam("inputTranslation") String inputTranslation, @RequestParam("language") String language) {
         try {
-            if(inputTranslation.contains("/")){
-                String [] translationArray = inputTranslation.split("/");
+            if(inputTranslation.contains("\n")){
+                String [] translationArray = inputTranslation.split("\n");
                 createJson.createDocument(inputWord,translationArray,language);
                 sendWord.sendFile(connectToDatabase.getMongoClient(),createJson.getDoc());
             }

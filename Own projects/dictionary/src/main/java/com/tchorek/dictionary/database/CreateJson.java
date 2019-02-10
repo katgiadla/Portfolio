@@ -20,11 +20,11 @@ public class CreateJson {
 
     private String formatWord(String input) throws NoValueException {
         checkIfNoEmptyValue(input);
-        return input.replaceAll("\\s+","").substring(0,1).toUpperCase()+input.replaceAll("\\s+","").substring(1).toLowerCase().replaceAll("\\_+"," ").replaceAll("\\-+"," ");
+        return input/*.replaceAll("\\s+","")*/.substring(0,1).toUpperCase()+input/*.replaceAll("\\s+","")*/.substring(1).toLowerCase()/*.replaceAll("\\_+"," ").replaceAll("\\-+"," ")*/;
     }
 
     private void checkIfNoEmptyValue(String suspicious)throws NoValueException {
-        if(suspicious.equals("") )throw new NoValueException("Lack of String in checkIfNoEmptyValue");
+        if(suspicious.equals("") )throw new NoValueException("You gave empty String in translation input");
     }
 
         private void checkIfNoEmptyValue(int index)throws NoValueException{

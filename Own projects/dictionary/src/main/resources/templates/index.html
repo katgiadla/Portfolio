@@ -10,17 +10,17 @@
     <div class="container-inner">
         <div class="area" >
             <form  th:action="@{/}" method="post">
-                <input   type="text" th:id="inputWord" name="inputWord" />
-                <input   type="text" th:id="inputTranslation" name="inputTranslation" />
-                <input   type="text" th:id="language" name="language" value="English" />
+                <textarea th:rows="1" th:cols="22" th:id="inputWord" name="inputWord" ></textarea>
+                <textarea th:rows="1" th:cols="22" th:id="inputTranslation" name="inputTranslation"></textarea>
+                <textarea th:rows="1" th:cols="22" th:id="language" name="language" value="English" ></textarea>
                 <input   type="submit" th:id="addWord" value="add" />
             </form>
         </div>
         <div class="area">
             <form th:action="@{/delete}" method="post">
-                <input   type="text" th:id="inputWordDelete" name="inputWordDelete" />
-                <input   type="text" th:id="inputTranslationDelete" name="inputTranslationDelete" />
-                <input   type="text" th:id="languageDelete" name="languageDelete" value="English" />
+                <textarea th:rows="1" th:cols="22" th:id="inputWordDelete" name="inputWordDelete" ></textarea>
+                <textarea th:rows="1" th:cols="22" th:id="inputTranslationDelete" name="inputTranslationDelete"></textarea>
+                <textarea th:rows="1" th:cols="22" th:id="languageDelete" name="languageDelete" value="English" ></textarea>
                 <input   type="submit" th:id="deleteWord" value="delete" />
             </form>
         </div>
