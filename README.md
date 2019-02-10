@@ -85,16 +85,13 @@ If you feel you no longer need that word you can remove it by putting previous d
 
 <br/>
 
-```diff
-+ To improve
-```
-
 <br>
 You can also include multiple translations like this: <br/> 
 
 | Word  | Translation      | Language |
 | ----- | ---------------- | -------- |
-| Word  | Meaning1/Meaning2| German   |
+| Word  | Meaning1 <br> Meaning2	   | German   |
+
 
 <br/>
 This will divide the translation and add the same word with each diffirent meaning to the vocabulary table.<br/>
@@ -102,20 +99,10 @@ This will divide the translation and add the same word with each diffirent meani
 ```diff
 - Warning 
 Deleting multi translation does not work yet. 
-Adding spaces spaces between slash in formula above will cause problems.
+First word cannot be deleted for unknown reason.
+Propably invisible character.
 ```
 
-<br/>
-
-You can also add idioms or other multi-words with multi-word translations but each needs to be separated with underscore or dash like this:
-
-| Word  | Translation      | Language |
-| ----- | ---------------- | -------- |
-| Break_a_leg  | Good-luck | German   |
-
-<br/>
-Otherwise you will get an hard-to-read text.
-<br/>
 
 #### Restrictions
 <a name="GoBottom"></a>
