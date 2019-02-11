@@ -10,23 +10,23 @@
     <div class="container-inner">
         <div class="area" >
             <form  th:action="@{/}" method="post">
-                <textarea th:rows="1" th:cols="22" th:id="inputWord" name="inputWord" ></textarea>
-                <textarea th:rows="1" th:cols="22" th:id="inputTranslation" name="inputTranslation"></textarea>
-                <textarea th:rows="1" th:cols="22" th:id="language" name="language" value="English" ></textarea>
+                <textarea style="resize:none" rows="1" cols="22" th:id="inputWord" name="inputWord" ></textarea>
+                <textarea style="resize:none" rows="1" cols="22" th:id="inputTranslation" name="inputTranslation"></textarea>
+                <textarea style="resize:none" rows="1" cols="22" th:id="language" name="language" value="English" ></textarea>
                 <input   type="submit" th:id="addWord" value="add" />
             </form>
         </div>
         <div class="area">
             <form th:action="@{/delete}" method="post">
-                <textarea th:rows="1" th:cols="22" th:id="inputWordDelete" name="inputWordDelete" ></textarea>
-                <textarea th:rows="1" th:cols="22" th:id="inputTranslationDelete" name="inputTranslationDelete"></textarea>
-                <textarea th:rows="1" th:cols="22" th:id="languageDelete" name="languageDelete" value="English" ></textarea>
+                <textarea style="resize:none" rows="1" cols="22" th:id="inputWordDelete" name="inputWordDelete" ></textarea>
+                <textarea style="resize:none" rows="1" cols="22" th:id="inputTranslationDelete" name="inputTranslationDelete"></textarea>
+                <textarea style="resize:none" rows="1" cols="22" th:id="languageDelete" name="languageDelete" value="English" ></textarea>
                 <input   type="submit" th:id="deleteWord" value="delete" />
             </form>
         </div>
     </div>
 </div>
-<h5>version 1.3.1</h5>
+<h5>version 1.4.2</h5>
 <!--
 /* Major - incompatible API changes, MINOR, functionality backwards-compatible, PATCH, bug fixes*/
 -->

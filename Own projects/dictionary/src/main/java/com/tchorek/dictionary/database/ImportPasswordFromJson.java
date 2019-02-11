@@ -2,11 +2,9 @@ package com.tchorek.dictionary.database;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class ImportPasswordFromJson {
 
