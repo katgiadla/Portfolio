@@ -120,5 +120,8 @@ In order to dispose of the 'unremoveable' follow the pattern: <br/>
 It deletes the first met word, may result in deleting the one with diffirent translation. Needs to be fixed. 
 ```
 
+However, there is an alternative. Instead of "Delete" use "Deletemany".
+This will result in deleting each specified word in the vocabulary collection.
+
 <a name="GoBottom"></a>
 [Go Top](#GoTop)
