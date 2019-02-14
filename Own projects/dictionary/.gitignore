@@ -35,5 +35,4 @@
 ### Sensitive Data ###
 db_access/
 /db_access/
-*.json
-
+[dD]ata*.json

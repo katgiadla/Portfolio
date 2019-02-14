@@ -19,14 +19,14 @@ class ImportPasswordFromJsoNTest {
 
     @Test
     public void testImportPasswordSuccess() throws FileNotFoundException {
-        expectedPassword =importPasswordFromJson.importPassword(PATH,"data2.json");
+        expectedPassword =importPasswordFromJson.importPassword(PATH,"Data2.json");
         assertEquals(expectedPassword,"FakePassword");
     }
 
     @Test
     public void testImportPasswordFailure() throws FileNotFoundException {
         assertNotEquals(
-            importPasswordFromJson.importPassword(PATH,"data1.json"),"FakePassword");
+            importPasswordFromJson.importPassword(PATH,"Data1.json"),"FakePassword");
     }
 
     @Test
