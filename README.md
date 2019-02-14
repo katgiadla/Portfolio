@@ -16,6 +16,20 @@ Databases (MongoDb & Hibernate) <br />
 College Java repository:<br/>
 https://github.com/Tchorson/Java_GCL07_lato_2018_Mateusz_Tchorek <br /> 
 
+<ul>
+	<li>Dictionary </li>
+- Json with properties - the connection mongodb url
+- html popup window for connection
+- a function / script enabling to create json with password
+- json file with db url + application properties
+
+	<li>Job offers collector </li>
+- Add Jsoup to retrieve DOM
+- Add functions to convert basic offers to POJOs
+
+</ul>
+
+
 
 ## Projects in development:
 <br/>
