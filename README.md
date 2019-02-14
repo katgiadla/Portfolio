@@ -17,15 +17,19 @@ College Java repository:<br/>
 https://github.com/Tchorson/Java_GCL07_lato_2018_Mateusz_Tchorek <br /> 
 
 <ul>
-	<li>Dictionary </li>
-- Json with properties - the connection mongodb url
-- html popup window for connection
-- a function / script enabling to create json with password
-- json file with db url + application properties
+	<li>Dictionary </li> <br>
+</ul>
 
-	<li>Job offers collector </li>
-- Add Jsoup to retrieve DOM
-- Add functions to convert basic offers to POJOs
+	-Json with properties - the connection mongodb url <br/>
+	-html popup window for connection <br>
+	-a function / script enabling to create json with password <br>	
+	-json file with db url + application properties <br>
+
+<ul>
+	<li>Job offers collector </li> <br>
+	
+	-Add Jsoup to retrieve DOM <br> 
+	-Add functions to convert basic offers to POJOs <br>
 
 </ul>
 
