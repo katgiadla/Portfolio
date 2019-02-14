@@ -5,6 +5,10 @@
 In this repository are and will be kept every projects created by me from scratch. 
 
 
+<br/>
+<br/>
+College Java repository:<br/>
+https://github.com/Tchorson/Java_GCL07_lato_2018_Mateusz_Tchorek <br /> 
 
 
 ###### Todo 
@@ -12,27 +16,16 @@ Javascript <br />
 Databases (MongoDb & Hibernate) <br /> 
 
 <br/>
-<br/>
-College Java repository:<br/>
-https://github.com/Tchorson/Java_GCL07_lato_2018_Mateusz_Tchorek <br /> 
 
-<ul>
-	<li>Dictionary </li> <br>
-</ul>
-
-	-Json with properties - the connection mongodb url 
-	-html popup window for connection 
-	-a function / script enabling to create json with password 	
-	-json file with db url + application properties 
-
-<ul>
-	<li>Job offers collector </li> <br>
+- Dictionary <br/>
+	- HTML popup window for connection  <br>
+	- A function / script enabling to create json with password and properties separately and update the database url	 <br>
+	- ~~-json file with db url and application properties~~  <br>
+- Job offers collector <br/>
+	- Add Jsoup to retrieve DOM  <br/>
+	- Add functions to convert basic offers to POJOs  <br/>
 	
-	-Add Jsoup to retrieve DOM 
-	-Add functions to convert basic offers to POJOs 
-
-</ul>
-
+<br>
 
 
 ## Projects in development:
