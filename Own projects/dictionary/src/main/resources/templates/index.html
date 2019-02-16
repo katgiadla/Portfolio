@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <title>Dictionary</title>
     <link rel="stylesheet" th:href="@{/assets/css/index.css}"/>
+
+    <script language="JavaScript" type="text/javascript">
+        var isUp = false;
+        function login(){
+            if(isUp == false){
+                document.getElementById('popupbox').style.visibility="visible";
+                isUp = true;
+            }else if(isUp == true){
+                document.getElementById('popupbox').style.visibility="hidden";
+                isUp = false;
+            }
+        }
+    </script>
 </head>
 <body>
-<!--Add popup window-->
+<div id="popupbox" >
+    <form name="login" action="" method="post">
+        <center>Full database Url:</center>
+        <center><input name="mongoUrl" size="50" /></center>
+        <center>Password:</center>
+        <center><input name="mongoPassword" type="password" size="14" /></center>
+        <center><input type="submit" name="submit" value="change database connection" /></center>
+        <h5>version 1.4.2</h5>
+    </form>
+    <br />
+</div>
 
 <div class="container">
     <div class="container-inner">
@@ -16,6 +39,7 @@
                 <textarea style="resize:none" rows="1" cols="22" th:id="inputTranslation" name="inputTranslation"></textarea>
                 <textarea style="resize:none" rows="1" cols="22" th:id="language" name="language" value="English" ></textarea>
                 <input   type="submit" th:id="addWord" value="add" />
+                <a href="javascript:login();">login</a>
             </form>
         </div>
         <div class="area">
@@ -28,7 +52,6 @@
         </div>
     </div>
 </div>
-<h5>version 1.4.2</h5>
 <!--
 /* Major - Functionalities expanding application, minor,  functionalities adding new service , PATCH, bug fixes*/
 -->
