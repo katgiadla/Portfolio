@@ -1,4 +1,4 @@
 {
   "first_launch":"true",
-  "database_url":""
+  "database_url":"mongodb+srv://mtchorek:<PASSWORD>@information-collections-mz7lu.mongodb.net/test?retryWrites=true"
 }

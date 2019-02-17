@@ -10,19 +10,21 @@ import java.io.FileNotFoundException;
 public class ConnectToDatabase {
 
     private String inputPassword;
+    private String[]inputUrlDB;
 
     private MongoClientURI uri;
     private MongoClient mongoClient;
 
     public ConnectToDatabase() throws FileNotFoundException {
         inputPassword = new ImportPasswordFromJson().importPassword("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\","Data1.json");
+        inputUrlDB = new FetchDataFromUser().importDatabaseUrl().split("<PASSWORD>");
         uri = connectToDB(inputPassword);
         mongoClient = new MongoClient(uri);
     }
 
     private MongoClientURI connectToDB(String inputPassword) {
         return new MongoClientURI(
-                "mongodb+srv://mtchorek:" + inputPassword + "@information-collections-mz7lu.mongodb.net/test?retryWrites=true"
+                inputUrlDB[0] + inputPassword + inputUrlDB[1]
         );
     }
 

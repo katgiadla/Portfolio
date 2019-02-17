@@ -48,6 +48,12 @@ public class DictionaryController{
         return "index";
     }
 
+    @PostMapping("/sendConfig")
+    public String setupDatabaseConnection(Model model, @RequestParam("mongoPassword") String mongoPassword, @RequestParam("mongoUrl")String mongoUrl){
+
+        return "index";
+    }
+
     @PostMapping("/")
     public String sendWord(Model model, @RequestParam("inputWord") String inputWord, @RequestParam("inputTranslation") String inputTranslation, @RequestParam("language") String language) {
         try {
