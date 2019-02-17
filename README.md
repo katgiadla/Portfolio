@@ -20,17 +20,16 @@ Databases (MongoDb & Hibernate) <br />
 - Dictionary <br/>
 	- ~~HTML popup window for connection ~~ <br>
 	- A function / script enabling to create json with password and properties separately and update the database url: <br>
-		-check json url at start <br>
-		-set db url if not equals "",otherwise enforce user to put mongoDB cluster link<br>
-		-set password in hidden file <br>
-		-establish connection <br>
+		- check json url at start <br>
+		- set db url if not equals "",otherwise enforce user to put mongoDB cluster link<br>
+		- set password in hidden file <br>
+		- establish connection <br>
 	- ~~-json file with db url and application properties~~  <br>
 - Job offers collector <br/>
 	- Add Jsoup to retrieve DOM  <br/>
 	- Add functions to convert basic offers to POJOs  <br/>
 	
 <br>
-
 
 ## Projects in development:
 <br/>
