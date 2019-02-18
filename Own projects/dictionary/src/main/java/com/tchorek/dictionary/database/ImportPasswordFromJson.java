@@ -2,31 +2,36 @@ package com.tchorek.dictionary.database;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import org.bson.Document;
 
 import java.io.*;
 
 
 public class ImportPasswordFromJson {
 
-    public ImportPasswordFromJson(){
+    private void checkPasswordFileExists() throws IOException {
+        if(!new File("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\Data1.json").exists()){
+            Document doc = new Document();
+            doc.put("password","");
+            try(FileWriter file = new FileWriter("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json")){
+                file.write(doc.toJson());
+            }
+            throw new IOException("created password file");
+        }
     }
 
-    public String importPassword(String inputPath,String inputFileName) throws FileNotFoundException {
-        final String PATH = inputPath;
-        String passwodFileName = inputFileName;
 
+    public String importPassword(String inputPath,String inputFileName) {
         BufferedReader br = null;
 
-        if (!new File(PATH + passwodFileName).exists())
-            throw new FileNotFoundException("The password file has not been found");
-
         try {
+            checkPasswordFileExists();
             Gson gson = new Gson();
-            br = new BufferedReader(new FileReader(PATH + passwodFileName));
+            br = new BufferedReader(new FileReader(inputPath + inputFileName));
 
             return gson.fromJson(br, JsonObject.class).get("password").getAsString();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         } finally {
             try {
                 if(br!=null) br.close();
