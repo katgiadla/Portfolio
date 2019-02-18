@@ -6,7 +6,7 @@ import org.bson.Document;
 
 import java.io.*;
 
-public class FetchDataFromUser {
+public class GetDatabaseUrl {
     /** TODO: 14.02.2019
      *  The function will receive 2 arguments
      *  First: database url
@@ -18,7 +18,7 @@ public class FetchDataFromUser {
      *  Add javascript that will check AppProperties.json file in order to pop the pop-window
     */
 
-    private void checkPropertiesExists() throws IOException {
+    private void checkPropertiesFileExists() throws IOException {
         if(!new File("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json").exists()){
             Document doc = new Document();
             doc.put("first_launch",true);
@@ -26,6 +26,7 @@ public class FetchDataFromUser {
             try(FileWriter file = new FileWriter("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json")){
                 file.write(doc.toJson());
             }
+            throw new IOException("created new Properties File");
         }
     }
 
@@ -33,12 +34,14 @@ public class FetchDataFromUser {
 
         BufferedReader br = null;
         try{
-            checkPropertiesExists();
+            checkPropertiesFileExists();
             br = new BufferedReader(new FileReader("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json"));
+
+                new Gson();
             return new Gson().fromJson(br, JsonObject.class).get("database_url").getAsString();
 
         }catch(IOException aa ){
-            aa.printStackTrace();
+            System.err.println(aa.getMessage());
         }finally {
             try {
                 if(br!=null) br.close();

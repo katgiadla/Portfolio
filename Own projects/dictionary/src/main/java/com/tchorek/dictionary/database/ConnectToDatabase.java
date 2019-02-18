@@ -15,9 +15,9 @@ public class ConnectToDatabase {
     private MongoClientURI uri;
     private MongoClient mongoClient;
 
-    public ConnectToDatabase() throws FileNotFoundException {
+    public ConnectToDatabase() {
         inputPassword = new ImportPasswordFromJson().importPassword("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\","Data1.json");
-        inputUrlDB = new FetchDataFromUser().importDatabaseUrl().split("<PASSWORD>");
+        inputUrlDB = new GetDatabaseUrl().importDatabaseUrl().split("<PASSWORD>");
         uri = connectToDB(inputPassword);
         mongoClient = new MongoClient(uri);
     }
