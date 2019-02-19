@@ -37,7 +37,6 @@ public class GetDatabaseUrl {
             checkPropertiesFileExists();
             br = new BufferedReader(new FileReader("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json"));
 
-                new Gson();
             return new Gson().fromJson(br, JsonObject.class).get("database_url").getAsString();
 
         }catch(IOException aa ){

@@ -24,12 +24,18 @@ public class DictionaryController{
 
     private final DeleteWord deleteWord;
 
+    private final UpdateDatabasePassword updateDatabasePassword;
+
+    private final UpdateDatabaseUrl updateDatabaseUrl;
+
     @Autowired
-    public DictionaryController(SendWord sendWord, CreateJson createJson, ConnectToDatabase connectToDatabase, DeleteWord deleteWord) {
+    public DictionaryController(SendWord sendWord, CreateJson createJson, ConnectToDatabase connectToDatabase, DeleteWord deleteWord, UpdateDatabasePassword updateDatabasePassword, UpdateDatabaseUrl updateDatabaseUrl) {
         this.sendWord = sendWord;
         this.createJson = createJson;
         this.connectToDatabase = connectToDatabase;
         this.deleteWord = deleteWord;
+        this.updateDatabasePassword = updateDatabasePassword;
+        this.updateDatabaseUrl = updateDatabaseUrl;
         this.importCollection = new ImportVocabularyCollection(this.connectToDatabase.getMongoClient());
     }
 
@@ -50,6 +56,8 @@ public class DictionaryController{
 
     @PostMapping("/sendConfig")
     public String setupDatabaseConnection(Model model, @RequestParam("mongoPassword") String mongoPassword, @RequestParam("mongoUrl")String mongoUrl){
+        updateDatabaseUrl.updateDatabaseUrl(mongoUrl);
+        updateDatabasePassword.updatePassword(mongoPassword);
 
         return "index";
     }

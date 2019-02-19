@@ -6,3 +6,4 @@ public class NoValueException extends Exception {
         super(errorMessage);
     }
 }
+//  "database_url":"mongodb+srv://mtchorek:<PASSWORD>@information-collections-mz7lu.mongodb.net/test?retryWrites=true"
