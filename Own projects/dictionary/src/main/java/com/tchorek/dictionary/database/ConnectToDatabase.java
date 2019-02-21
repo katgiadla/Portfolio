@@ -20,10 +20,14 @@ public class ConnectToDatabase {
     private MongoClient mongoClient;
 
     // resources
-    private final String PATH = "C:\\Private Education\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
+    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
 
     public ConnectToDatabase() {
 
+        launchDbConnection();
+    }
+
+    public void launchDbConnection(){
         inputPassword = new ImportPasswordFromJson().importPassword(PATH,"Data1.json");
         inputUrlDB = new GetDatabaseUrl().importDatabaseUrl().split("<PASSWORD>");
         uri = connectToDB(inputPassword);
@@ -41,8 +45,5 @@ public class ConnectToDatabase {
         return mongoClient;
     }
 
-    public static void main(String[] args) {
-        MongoClient mongoClient = new MongoClient();
 
-    }
 }

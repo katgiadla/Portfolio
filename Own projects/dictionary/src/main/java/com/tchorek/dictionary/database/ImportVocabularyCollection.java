@@ -16,9 +16,12 @@ public class ImportVocabularyCollection {
     private ArrayList<Vocabulary> vocabulary = new ArrayList<>();
 
     public ImportVocabularyCollection(MongoClient mongoClient){
-        this.mongoClient = mongoClient;
-        this.checkAndGetDatabaseCollection();
+        this.setDbClient(mongoClient);
     }
+
+    public void setDbClient(MongoClient mongoClient){
+        this.mongoClient = mongoClient;
+        this.checkAndGetDatabaseCollection();    }
 
     public ArrayList<Vocabulary> checkAndGetDatabaseCollection(){
         this.doc = getAllObjects();

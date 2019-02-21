@@ -18,7 +18,7 @@ public class DictionaryController{
 
     private final SendWord sendWord;
 
-    private final CreateJson createJson;
+    private final CreateVocabulary createVocabulary;
 
     private final ConnectToDatabase connectToDatabase;
 
@@ -29,9 +29,9 @@ public class DictionaryController{
     private final UpdateDatabaseUrl updateDatabaseUrl;
 
     @Autowired
-    public DictionaryController(ImportVocabularyCollection importCollection, SendWord sendWord, CreateJson createJson, ConnectToDatabase connectToDatabase, DeleteWord deleteWord, UpdateDatabasePassword updateDatabasePassword, UpdateDatabaseUrl updateDatabaseUrl) {
+    public DictionaryController(ImportVocabularyCollection importCollection, SendWord sendWord, CreateVocabulary createVocabulary, ConnectToDatabase connectToDatabase, DeleteWord deleteWord, UpdateDatabasePassword updateDatabasePassword, UpdateDatabaseUrl updateDatabaseUrl) {
         this.sendWord = sendWord;
-        this.createJson = createJson;
+        this.createVocabulary = createVocabulary;
         this.connectToDatabase = connectToDatabase;
         this.deleteWord = deleteWord;
         this.updateDatabasePassword = updateDatabasePassword;
@@ -58,7 +58,12 @@ public class DictionaryController{
     public String setupDatabaseConnection(Model model, @RequestParam("mongoPassword") String mongoPassword, @RequestParam("mongoUrl")String mongoUrl){
         updateDatabaseUrl.updateDatabaseUrl(mongoUrl);
         updateDatabasePassword.updatePassword(mongoPassword);
+        connectToDatabase.getMongoClient().close();
 
+        connectToDatabase.launchDbConnection();
+        importCollection.setDbClient(connectToDatabase.getMongoClient());
+
+        model.addAttribute("vocabulary",importCollection.checkAndGetDatabaseCollection());
         return "index";
     }
 
@@ -67,12 +72,12 @@ public class DictionaryController{
         try {
             if(inputTranslation.contains("\n")){
                 String [] translationArray = inputTranslation.split("\n");
-                createJson.createDocument(inputWord,translationArray,language);
-                sendWord.sendFile(connectToDatabase.getMongoClient(),createJson.getDoc());
+                createVocabulary.createDocument(inputWord,translationArray,language);
+                sendWord.sendFile(connectToDatabase.getMongoClient(), createVocabulary.getDoc());
             }
             else {
-                createJson.createDocument(inputWord, new String[]{inputTranslation}, language);
-                sendWord.sendFile(connectToDatabase.getMongoClient(), createJson.getDoc());
+                createVocabulary.createDocument(inputWord, new String[]{inputTranslation}, language);
+                sendWord.sendFile(connectToDatabase.getMongoClient(), createVocabulary.getDoc());
             }
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
             return "index";
@@ -86,8 +91,8 @@ public class DictionaryController{
     public String deleteWord(Model model, @RequestParam("inputWordDelete") String inputWord, @RequestParam("inputTranslationDelete") String inputTranslation, @RequestParam("languageDelete") String language)  {
 
         try {
-            createJson.createDocument(inputWord, new String[]{inputTranslation}, language);
-            deleteWord.deleteFile(connectToDatabase.getMongoClient(), createJson.getDoc()[0]);
+            createVocabulary.createDocument(inputWord, new String[]{inputTranslation}, language);
+            deleteWord.deleteFile(connectToDatabase.getMongoClient(), createVocabulary.getDoc()[0]);
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
 
             return "index";

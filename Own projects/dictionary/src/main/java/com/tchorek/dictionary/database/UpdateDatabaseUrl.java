@@ -8,9 +8,13 @@ import java.io.*;
 
 @Component
 public class UpdateDatabaseUrl {
-    private final String PATH = "C:\\Private Education\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\";
+    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\";
 
     public void updateDatabaseUrl(String databaseUrl){
+        if(databaseUrl.equals("") || databaseUrl.equals(null)){
+            return;
+        }
+
 
         BufferedReader br = null;
         try {

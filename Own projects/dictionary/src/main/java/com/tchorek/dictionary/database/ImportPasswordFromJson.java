@@ -9,7 +9,7 @@ import java.io.*;
 
 public class ImportPasswordFromJson {
 
-    private final String PATH = "C:\\Private Education\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
+    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
 
     private void checkPasswordFileExists() throws IOException {
         if(!new File(PATH+"Data1.json").exists()){

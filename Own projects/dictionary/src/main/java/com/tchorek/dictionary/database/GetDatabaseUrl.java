@@ -17,7 +17,7 @@ public class GetDatabaseUrl {
      *
      *  Add javascript that will check AppProperties.json file in order to pop the pop-window
     */
-    private final String PATH = "C:\\Private Education\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\";
+    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\";
 
     private void checkPropertiesFileExists() throws IOException {
 

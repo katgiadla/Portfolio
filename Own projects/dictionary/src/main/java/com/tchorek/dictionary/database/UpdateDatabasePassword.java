@@ -11,9 +11,13 @@ import java.io.IOException;
 
 @Component
 public class UpdateDatabasePassword {
-    private final String PATH = "C:\\Private Education\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
+    private final String PATH =  "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
 
     public void updatePassword(String inputPassword){
+        if(inputPassword.equals("")|| inputPassword.equals(null)){
+            return;
+        }
+
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(PATH+"Data1.json"));

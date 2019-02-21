@@ -5,7 +5,7 @@ import org.bson.Document;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CreateJson {
+public class CreateVocabulary {
     private Document[] doc;
 
     public void createDocument(String inputWord, String[] translationList, String language) throws NoValueException {
