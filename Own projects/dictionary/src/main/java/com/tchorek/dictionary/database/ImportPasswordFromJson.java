@@ -9,11 +9,13 @@ import java.io.*;
 
 public class ImportPasswordFromJson {
 
+    private final String PATH = "C:\\Private Education\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
+
     private void checkPasswordFileExists() throws IOException {
-        if(!new File("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\Data1.json").exists()){
+        if(!new File(PATH+"Data1.json").exists()){
             Document doc = new Document();
             doc.put("password","");
-            try(FileWriter file = new FileWriter("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json")){
+            try(FileWriter file = new FileWriter(PATH+"Data1.json")){
                 file.write(doc.toJson());
             }
             throw new IOException("created password file");

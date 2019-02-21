@@ -17,13 +17,15 @@ public class GetDatabaseUrl {
      *
      *  Add javascript that will check AppProperties.json file in order to pop the pop-window
     */
+    private final String PATH = "C:\\Private Education\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\";
 
     private void checkPropertiesFileExists() throws IOException {
-        if(!new File("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json").exists()){
+
+        if(!new File(PATH+"AppProperties.json").exists()){
             Document doc = new Document();
             doc.put("first_launch",true);
             doc.put("database_url","");
-            try(FileWriter file = new FileWriter("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json")){
+            try(FileWriter file = new FileWriter(PATH+"AppProperties.json")){
                 file.write(doc.toJson());
             }
             throw new IOException("created new Properties File");
@@ -35,7 +37,7 @@ public class GetDatabaseUrl {
         BufferedReader br = null;
         try{
             checkPropertiesFileExists();
-            br = new BufferedReader(new FileReader("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json"));
+            br = new BufferedReader(new FileReader(PATH+"AppProperties.json"));
 
             return new Gson().fromJson(br, JsonObject.class).get("database_url").getAsString();
 

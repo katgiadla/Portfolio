@@ -29,14 +29,14 @@ public class DictionaryController{
     private final UpdateDatabaseUrl updateDatabaseUrl;
 
     @Autowired
-    public DictionaryController(SendWord sendWord, CreateJson createJson, ConnectToDatabase connectToDatabase, DeleteWord deleteWord, UpdateDatabasePassword updateDatabasePassword, UpdateDatabaseUrl updateDatabaseUrl) {
+    public DictionaryController(ImportVocabularyCollection importCollection, SendWord sendWord, CreateJson createJson, ConnectToDatabase connectToDatabase, DeleteWord deleteWord, UpdateDatabasePassword updateDatabasePassword, UpdateDatabaseUrl updateDatabaseUrl) {
         this.sendWord = sendWord;
         this.createJson = createJson;
         this.connectToDatabase = connectToDatabase;
         this.deleteWord = deleteWord;
         this.updateDatabasePassword = updateDatabasePassword;
         this.updateDatabaseUrl = updateDatabaseUrl;
-        this.importCollection = new ImportVocabularyCollection(this.connectToDatabase.getMongoClient());
+        this.importCollection = importCollection;// new ImportVocabularyCollection(this.connectToDatabase.getMongoClient());
     }
 
     @PreDestroy

@@ -8,12 +8,13 @@ import java.io.*;
 
 @Component
 public class UpdateDatabaseUrl {
+    private final String PATH = "C:\\Private Education\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\";
 
     public void updateDatabaseUrl(String databaseUrl){
 
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json"));
+            br = new BufferedReader(new FileReader(PATH+"AppProperties.json"));
             Document appPropertiesJson =  new Gson().fromJson(br, Document.class);
 
             if(appPropertiesJson.get("first_launch").equals(true)){
@@ -21,7 +22,7 @@ public class UpdateDatabaseUrl {
             }
             appPropertiesJson.put("database_url",databaseUrl);
 
-            try(FileWriter file = new FileWriter("E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\AppProperties.json")){
+            try(FileWriter file = new FileWriter(PATH+"AppProperties.json")){
                 file.write(appPropertiesJson.toJson());
             }
         } catch (IOException e) {
