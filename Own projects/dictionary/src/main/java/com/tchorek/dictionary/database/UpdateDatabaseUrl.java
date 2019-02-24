@@ -2,13 +2,20 @@ package com.tchorek.dictionary.database;
 
 import com.google.gson.Gson;
 import org.bson.Document;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
 
 @Component
 public class UpdateDatabaseUrl {
-    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\";
+
+
+    private String databaseFilePath;
+
+    public UpdateDatabaseUrl(@Value("${database.path}") String inputPathDatabase){
+        this.databaseFilePath = inputPathDatabase;
+    }
 
     public void updateDatabaseUrl(String databaseUrl){
         if(databaseUrl.equals("") || databaseUrl.equals(null)){
@@ -18,7 +25,7 @@ public class UpdateDatabaseUrl {
 
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader(PATH+"AppProperties.json"));
+            br = new BufferedReader(new FileReader(databaseFilePath +"AppProperties.json"));
             Document appPropertiesJson =  new Gson().fromJson(br, Document.class);
 
             if(appPropertiesJson.get("first_launch").equals(true)){
@@ -26,7 +33,7 @@ public class UpdateDatabaseUrl {
             }
             appPropertiesJson.put("database_url",databaseUrl);
 
-            try(FileWriter file = new FileWriter(PATH+"AppProperties.json")){
+            try(FileWriter file = new FileWriter(databaseFilePath +"AppProperties.json")){
                 file.write(appPropertiesJson.toJson());
             }
         } catch (IOException e) {

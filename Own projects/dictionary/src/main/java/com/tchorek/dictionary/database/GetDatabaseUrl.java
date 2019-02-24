@@ -3,9 +3,17 @@ package com.tchorek.dictionary.database;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import org.bson.Document;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.*;
 
+@Component
+@Configuration
 public class GetDatabaseUrl {
     /** TODO: 14.02.2019
      *  The function will receive 2 arguments
@@ -17,15 +25,21 @@ public class GetDatabaseUrl {
      *
      *  Add javascript that will check AppProperties.json file in order to pop the pop-window
     */
-    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\java\\com\\tchorek\\dictionary\\properties\\";
+
+
+    private String databaseFilePath;
+
+    public GetDatabaseUrl(@Value("${database.path}") String inputDatabasePath){
+        this.databaseFilePath = inputDatabasePath;
+    }
 
     private void checkPropertiesFileExists() throws IOException {
 
-        if(!new File(PATH+"AppProperties.json").exists()){
+        if(!new File(databaseFilePath +"AppProperties.json").exists()){
             Document doc = new Document();
             doc.put("first_launch",true);
             doc.put("database_url","");
-            try(FileWriter file = new FileWriter(PATH+"AppProperties.json")){
+            try(FileWriter file = new FileWriter(databaseFilePath +"AppProperties.json")){
                 file.write(doc.toJson());
             }
             throw new IOException("created new Properties File");
@@ -37,7 +51,7 @@ public class GetDatabaseUrl {
         BufferedReader br = null;
         try{
             checkPropertiesFileExists();
-            br = new BufferedReader(new FileReader(PATH+"AppProperties.json"));
+            br = new BufferedReader(new FileReader(databaseFilePath +"AppProperties.json"));
 
             return new Gson().fromJson(br, JsonObject.class).get("database_url").getAsString();
 

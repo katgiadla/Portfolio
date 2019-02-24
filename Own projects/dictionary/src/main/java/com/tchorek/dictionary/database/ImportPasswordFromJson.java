@@ -3,19 +3,24 @@ package com.tchorek.dictionary.database;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import org.bson.Document;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.PropertySource;
 
+import javax.annotation.PostConstruct;
 import java.io.*;
-
 
 public class ImportPasswordFromJson {
 
-    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
+
+    private  String passwordFilePath;
+
 
     private void checkPasswordFileExists() throws IOException {
-        if(!new File(PATH+"Data1.json").exists()){
+        if(!new File(passwordFilePath +"Data1.json").exists()){
             Document doc = new Document();
             doc.put("password","");
-            try(FileWriter file = new FileWriter(PATH+"Data1.json")){
+            try(FileWriter file = new FileWriter(passwordFilePath +"Data1.json")){
                 file.write(doc.toJson());
             }
             throw new IOException("created password file");
@@ -23,9 +28,9 @@ public class ImportPasswordFromJson {
         return;
     }
 
-
-    public String importPassword(String inputPath,String inputFileName) {
+    public String importPassword(@Value("${password.path}") String inputPath,String inputFileName) {
         BufferedReader br = null;
+        this.passwordFilePath = inputPath;
 
         try {
             checkPasswordFileExists();

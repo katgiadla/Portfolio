@@ -1,6 +1,6 @@
 package com.tchorek.dictionary.database;
 
-import com.tchorek.dictionary.properties.NoValueException;
+import com.tchorek.dictionary.properties.WrongValueException;
 import org.bson.Document;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class CreateVocabulary {
     private Document[] doc;
 
-    public void createDocument(String inputWord, String[] translationList, String language) throws NoValueException {
+    public void createDocument(String inputWord, String[] translationList, String language) throws WrongValueException {
         doc = new Document[translationList.length];
         for(int index =0;index<translationList.length;index++) {
             doc[index]= new Document();
@@ -18,20 +18,20 @@ public class CreateVocabulary {
         }
     }
 
-    private String formatWord(String input) throws NoValueException {
+    private String formatWord(String input) throws WrongValueException {
         checkIfNoEmptyValue(input);
         return input/*.replaceAll("\\s+","")*/.substring(0,1).toUpperCase()+input/*.replaceAll("\\s+","")*/.substring(1).toLowerCase()/*.replaceAll("\\_+"," ").replaceAll("\\-+"," ")*/;
     }
 
-    private void checkIfNoEmptyValue(String suspicious)throws NoValueException {
-        if(suspicious.equals("") )throw new NoValueException("You gave empty String in translation input");
+    private void checkIfNoEmptyValue(String suspicious)throws WrongValueException {
+        if(suspicious.equals("") )throw new WrongValueException("You gave empty String in translation input");
     }
 
-        private void checkIfNoEmptyValue(int index)throws NoValueException{
-        if(doc[index].get("word").equals("")||doc[index].get("translation").equals("")||doc[index].get("Language").equals(""))throw new NoValueException("Lack of a certain value in index: "+index);
+        private void checkIfNoEmptyValue(int index)throws WrongValueException {
+        if(doc[index].get("word").equals("")||doc[index].get("translation").equals("")||doc[index].get("Language").equals(""))throw new WrongValueException("Lack of a certain value in index: "+index);
     }
 
-    public Document[] getDoc() throws NoValueException{
+    public Document[] getDoc() throws WrongValueException {
         for(int index=0;index<doc.length;index++){
             checkIfNoEmptyValue(index);
         }

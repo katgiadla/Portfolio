@@ -1,13 +1,15 @@
 package com.tchorek.dictionary.database;
 
-import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-import java.io.FileNotFoundException;
+import javax.annotation.PostConstruct;
 
 @Component
 @Configuration
@@ -19,17 +21,18 @@ public class ConnectToDatabase {
     private MongoClientURI uri;
     private MongoClient mongoClient;
 
-    // resources
-    private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
+    private String databaseFilePath;
+    private String passwordFilePath;
 
-    public ConnectToDatabase() {
-
+    public ConnectToDatabase(@Value("${password.path}") String inputPathToPassword, @Value("${database.path}") String inputPathToDatabase) {
+        this.passwordFilePath = inputPathToPassword;
+        this.databaseFilePath = inputPathToDatabase;
         launchDbConnection();
     }
 
     public void launchDbConnection(){
-        inputPassword = new ImportPasswordFromJson().importPassword(PATH,"Data1.json");
-        inputUrlDB = new GetDatabaseUrl().importDatabaseUrl().split("<PASSWORD>");
+        inputPassword = new ImportPasswordFromJson().importPassword(passwordFilePath,"Data1.json");
+        inputUrlDB = new GetDatabaseUrl(databaseFilePath).importDatabaseUrl().split("<PASSWORD>");
         uri = connectToDB(inputPassword);
         mongoClient = new MongoClient(uri);
     }

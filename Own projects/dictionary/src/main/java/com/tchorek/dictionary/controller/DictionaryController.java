@@ -2,7 +2,7 @@ package com.tchorek.dictionary.controller;
 
 import com.mongodb.MongoSocketReadException;
 import com.tchorek.dictionary.database.*;
-import com.tchorek.dictionary.properties.NoValueException;
+import com.tchorek.dictionary.properties.WrongValueException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -81,7 +81,7 @@ public class DictionaryController{
             }
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
             return "index";
-        }catch (NoValueException e){
+        }catch (WrongValueException e){
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
             return "index";
         }
@@ -96,7 +96,7 @@ public class DictionaryController{
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
 
             return "index";
-        }catch (NoValueException | MongoSocketReadException e ){
+        }catch (WrongValueException | MongoSocketReadException e ){
             model.addAttribute("vocabulary", importCollection.checkAndGetDatabaseCollection());
             return "index";
         }

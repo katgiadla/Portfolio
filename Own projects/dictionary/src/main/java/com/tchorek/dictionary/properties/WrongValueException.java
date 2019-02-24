@@ -1,8 +1,8 @@
 package com.tchorek.dictionary.properties;
 
-public class NoValueException extends Exception {
+public class WrongValueException extends Exception {
 
-    public NoValueException(String errorMessage){
+    public WrongValueException(String errorMessage){
         super(errorMessage);
     }
 }

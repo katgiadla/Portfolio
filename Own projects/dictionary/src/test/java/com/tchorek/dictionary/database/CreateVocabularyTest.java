@@ -1,6 +1,6 @@
 package com.tchorek.dictionary.database;
 
-import com.tchorek.dictionary.properties.NoValueException;
+import com.tchorek.dictionary.properties.WrongValueException;
 import org.bson.Document;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +19,7 @@ class CreateVocabularyTest {
     }
 
     @Test
-    public void createJsonTestSuccess() throws NoValueException {
+    public void createJsonTestSuccess() throws WrongValueException {
         createVocabulary.createDocument("Commissioned",new String[]{"Upoważniony"},"English");
         Document doc = createVocabulary.getDoc()[0];
         assertEquals(doc.get("word"),"Commissioned");
@@ -28,15 +28,15 @@ class CreateVocabularyTest {
     }
 
     @Test
-    public void createJsonTestFailure() throws NoValueException {
+    public void createJsonTestFailure() throws WrongValueException {
         createVocabulary.createDocument("",new String[]{""},"");
-        assertThrows(NoValueException.class, ()-> { createVocabulary.getDoc();});
+        assertThrows(WrongValueException.class, ()-> { createVocabulary.getDoc();});
         createVocabulary.createDocument("Black",new String[]{""},"English");
-        assertThrows(NoValueException.class, ()-> { createVocabulary.getDoc();});
+        assertThrows(WrongValueException.class, ()-> { createVocabulary.getDoc();});
         createVocabulary.createDocument("",new String[]{"Czarny"},"English");
-        assertThrows(NoValueException.class, ()-> { createVocabulary.getDoc();});
+        assertThrows(WrongValueException.class, ()-> { createVocabulary.getDoc();});
         createVocabulary.createDocument("Black",new String[]{"Czarny"},"");
-        assertThrows(NoValueException.class, ()-> { createVocabulary.getDoc();});
+        assertThrows(WrongValueException.class, ()-> { createVocabulary.getDoc();});
     }
 
 
