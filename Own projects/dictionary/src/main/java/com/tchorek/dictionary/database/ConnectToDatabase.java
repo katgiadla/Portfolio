@@ -2,14 +2,10 @@ package com.tchorek.dictionary.database;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
 
 @Component
 @Configuration
@@ -31,7 +27,7 @@ public class ConnectToDatabase {
     }
 
     public void launchDbConnection(){
-        inputPassword = new ImportPasswordFromJson().importPassword(passwordFilePath,"Data1.json");
+        inputPassword = new GetDatabasePassword().importPassword(passwordFilePath,"Data1.json");
         inputUrlDB = new GetDatabaseUrl(databaseFilePath).importDatabaseUrl().split("<PASSWORD>");
         uri = connectToDB(inputPassword);
         mongoClient = new MongoClient(uri);

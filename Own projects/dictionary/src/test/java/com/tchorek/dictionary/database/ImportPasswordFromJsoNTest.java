@@ -8,38 +8,38 @@ import org.junit.jupiter.api.*;
 
 
 class ImportPasswordFromJsoNTest {
-    ImportPasswordFromJson importPasswordFromJson;
+    GetDatabasePassword getDatabasePassword;
     String expectedPassword;
     private final String PATH = "E:\\AGH\\Portfolio\\Own projects\\dictionary\\src\\main\\resources\\db_access\\";
 
     @BeforeEach
     public void setUpClass(){
-        importPasswordFromJson = new ImportPasswordFromJson();
+        getDatabasePassword = new GetDatabasePassword();
     }
 
     @Test
     public void testImportPasswordSuccess() throws FileNotFoundException {
-        expectedPassword =importPasswordFromJson.importPassword(PATH,"Data2.json");
+        expectedPassword = getDatabasePassword.importPassword(PATH,"Data2.json");
         assertEquals(expectedPassword,"FakePassword");
     }
 
     @Test
     public void testImportPasswordFailure() throws FileNotFoundException {
         assertNotEquals(
-            importPasswordFromJson.importPassword(PATH,"Data1.json"),"FakePassword");
+            getDatabasePassword.importPassword(PATH,"Data1.json"),"FakePassword");
     }
 
     @Test
     public void testImportPasswordException(){
         assertThrows(FileNotFoundException.class, ()->{
-            importPasswordFromJson.importPassword(PATH,"NotExistingFile.json"); } );
+            getDatabasePassword.importPassword(PATH,"NotExistingFile.json"); } );
         assertThrows(FileNotFoundException.class, ()->{
-            importPasswordFromJson.importPassword("NoPathToFile","password3.json"); } );
+            getDatabasePassword.importPassword("NoPathToFile","password3.json"); } );
 
     }
 
     @AfterEach
     public void tearDownClass(){
-        importPasswordFromJson = null;
+        getDatabasePassword = null;
     }
 }

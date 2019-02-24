@@ -17,14 +17,26 @@ public class UpdateDatabaseUrl {
         this.databaseFilePath = inputPathDatabase;
     }
 
-    public void updateDatabaseUrl(String databaseUrl){
+    private void checkDatabaseExists(String inputDatabaseUrl) throws IOException {
+        if(!new File(databaseFilePath +"AppProperties.json").exists()){
+            Document doc = new Document();
+            doc.put("first_launch",false);
+            doc.put("database_url",inputDatabaseUrl);
+            try(FileWriter file = new FileWriter(databaseFilePath +"AppProperties.json")){
+                file.write(doc.toJson());
+            }
+        }
+        return;
+    }
+
+    public void updateDatabaseUrl(String databaseUrl) {
         if(databaseUrl.equals("") || databaseUrl.equals(null)){
             return;
         }
-
-
         BufferedReader br = null;
+
         try {
+            checkDatabaseExists(databaseUrl);
             br = new BufferedReader(new FileReader(databaseFilePath +"AppProperties.json"));
             Document appPropertiesJson =  new Gson().fromJson(br, Document.class);
 
@@ -37,7 +49,7 @@ public class UpdateDatabaseUrl {
                 file.write(appPropertiesJson.toJson());
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }finally {
             try {
                 if(br!=null) br.close();

@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 @Component
 public class UpdateDatabasePassword {
@@ -21,13 +18,26 @@ public class UpdateDatabasePassword {
         this.passwordFilePath = inputPasswordPath;
     }
 
-    public void updatePassword(String inputPassword){
+    private void checkPasswordFileExists(String inputPassword) throws IOException {
+        if(!new File(passwordFilePath +"Data1.json").exists()){
+            Document doc = new Document();
+            doc.put("password",inputPassword);
+            try(FileWriter file = new FileWriter(passwordFilePath +"Data1.json")){
+                file.write(doc.toJson());
+            }
+        }
+        return;
+    }
+
+    public void updatePassword(String inputPassword) {
         if(inputPassword.equals("")|| inputPassword.equals(null)){
             return;
         }
 
         BufferedReader br = null;
         try {
+            checkPasswordFileExists(inputPassword);
+
             br = new BufferedReader(new FileReader(passwordFilePath +"Data1.json"));
             Document data1Json =  new Gson().fromJson(br, Document.class);
 
@@ -37,7 +47,7 @@ public class UpdateDatabasePassword {
                 file.write(data1Json.toJson());
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }finally {
             try {
                 if(br!=null) br.close();

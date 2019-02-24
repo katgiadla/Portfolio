@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 import javax.annotation.PostConstruct;
 import java.io.*;
 
-public class ImportPasswordFromJson {
+public class GetDatabasePassword {
 
 
     private  String passwordFilePath;
