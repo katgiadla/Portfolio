@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+    <link rel="stylesheet" th:href="@{/assets/css/index.css}"/>
+
+    <script language="JavaScript" type="text/javascript">
+        var isUp = false;
+        function login(){
+            if(isUp == false){
+                document.getElementById('popupbox').style.visibility="visible";
+                isUp = true;
+            }else if(isUp == true){
+                document.getElementById('popupbox').style.visibility="hidden";
+                isUp = false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id = "website" th:name="visibility" th:method="post">
+    <div id="popupbox" >
+        <form name="login" th:action="@{/sendConfig}" method="post">
+            <center>Full database Url:</center>
+            <center><input name="mongoUrl" size="50" /></center>
+            <center>Password:</center>
+            <center><input name="mongoPassword" type="password" size="14" /></center>
+            <center><input type="submit" name="submit" value="change database connection" /></center>
+            <h5>version 2.4.2</h5>
+        </form>
+        <br/>
+    </div>
+
+    <div class="container">
+        <div class="container-inner">
+            <div class="area" >
+                <form  th:action="@{/}" method="post">
+                    <textarea style="resize:none" rows="1" cols="22" th:id="inputWord" name="inputWord" ></textarea>
+                    <textarea style="resize:none" rows="1" cols="22" th:id="inputTranslation" name="inputTranslation"></textarea>
+                    <textarea style="resize:none" rows="1" cols="22" th:id="language" name="language" value="English" ></textarea>
+                    <input   type="submit" th:id="addWord" value="add" />
+                    <a href="javascript:login();">login</a>
+                </form>
+            </div>
+            <div class="area">
+                <form th:action="@{/delete}" method="post">
+                    <textarea style="resize:none" rows="1" cols="22" th:id="inputWordDelete" name="inputWordDelete" ></textarea>
+                    <textarea style="resize:none" rows="1" cols="22" th:id="inputTranslationDelete" name="inputTranslationDelete"></textarea>
+                    <textarea style="resize:none" rows="1" cols="22" th:id="languageDelete" name="languageDelete" value="English" ></textarea>
+                    <input   type="submit" th:id="deleteWord" value="delete" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--
+    /* Major - Functionalities expanding application, minor,  functionalities adding new service , PATCH, bug fixes*/
+    -->
+    <table class="array-element">
+        <tr class="headline">
+            <th th:text="word"></th>
+            <th th:text="translation"></th>
+            <th style="text-align: left" th:text="language"></th>
+        </tr>
+        <tr  th:each="vocabulary : ${vocabulary}">
+            <td th:text="${vocabulary.word + '    '}">word</td>
+            <td th:text="${vocabulary.translation + '    '}">translation</td>
+            <td style="text-align:left" th:text="${vocabulary.language + '    '}">language</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
