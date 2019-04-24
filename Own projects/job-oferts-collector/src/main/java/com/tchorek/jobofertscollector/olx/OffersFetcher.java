@@ -19,7 +19,7 @@ import java.util.List;
 @Data
 @Component
 @Controller
-public class OffersFetcher implements InitializingBean{
+public class OffersFetcher implements InitializingBean {
 
     private static String location = "krakow";
     private static final String URL = "https://www.olx.pl/praca/informatyka/" + location + "/";
@@ -33,22 +33,19 @@ public class OffersFetcher implements InitializingBean{
     private HashMap<String, String> interestingOferts;
 
 
-
     @GetMapping(value = "/home")
-    public String homePage(Model model, ModelMap modelMap)
-    {
-        model.addAttribute("websites",websitesList);
-        modelMap.put("websites",websitesList);
+    public String homePage(Model model, ModelMap modelMap) {
+        model.addAttribute("websites", websitesList);
+        modelMap.put("websites", websitesList);
         return "home";
     }
 
     @GetMapping(value = "/choice")
-    public String chosenWebsite(@RequestParam(name = "buttonChoice") String chosenUrl, ModelMap modelMap, Model model){
-        model.addAttribute("url",chosenUrl);
-        modelMap.put("url",chosenUrl);
+    public String chosenWebsite(@RequestParam(name = "buttonChoice") String chosenUrl, ModelMap modelMap, Model model) {
+        model.addAttribute("url", chosenUrl);
+        modelMap.put("url", chosenUrl);
         return "JobOffersChecker";
     }
-
 
 
     private void catchingMainPage() {
@@ -69,12 +66,10 @@ public class OffersFetcher implements InitializingBean{
     }
 
     private void collectingInterestingJobOffers() {
-        for(String jobUrl: allOferts)
-        {
+        for (String jobUrl : allOferts) {
             Document ofertSite = new Document(jobUrl);
             /*Elements*/
         }
-
 
 
     }

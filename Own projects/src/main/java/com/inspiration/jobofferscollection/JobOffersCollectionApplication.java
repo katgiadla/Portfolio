@@ -1,12 +1,14 @@
-package com.tchorek.jobofertscollector;
+package com.inspiration.jobofferscollection;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JobOfertsCollectorApplication {
+public class JobOffersCollectionApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JobOfertsCollectorApplication.class, args);
+        SpringApplication.run(JobOffersCollectionApplication.class, args);
     }
+
 }
+

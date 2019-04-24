@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="775e2681-7cf4-45c8-8bd2-f5fba7e86955" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MES2018/mes/funkcje/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MES2018/mes/funkcje/Element.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MES2018/mes/funkcje/GlobalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MES2018/mes/funkcje/GlobalData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/java/com/tchorek/jobofertscollector/JobOfertsCollectorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/java/com/tchorek/jobofertscollector/JobOfertsCollectorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/java/com/tchorek/jobofertscollector/data/Job_Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/java/com/tchorek/jobofertscollector/data/Job_Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/java/com/tchorek/jobofertscollector/data/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/java/com/tchorek/jobofertscollector/data/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/java/com/tchorek/jobofertscollector/olx/OffersFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/java/com/tchorek/jobofertscollector/olx/OffersFetcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/test/java/com/tchorek/jobofertscollector/JobOfertsCollectorApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Own projects/job-oferts-collector/src/test/java/com/tchorek/jobofertscollector/JobOfertsCollectorApplicationTests.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Downloads/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>local2DArrayArray</find>
+      <find>testlocal2darray</find>
+      <find>testNodeArray</find>
+      <find>elementindex</find>
+      <find>Jakobian_2d</find>
+      <find>system.out.print</find>
+      <find>Local2D</find>
+      <find>nodesCollection</find>
+      <find>nodesFromGrid</find>
+      <find>println</find>
+      <find>Integer.parseInt</find>
+      <find>globalMatrix</find>
+      <find>globalMatrixH</find>
+      <find>transponujTa</find>
+      <find>print</find>
+      <find>agre</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>local2DArray</replace>
+      <replace>nodesFromGrid</replace>
+      <replace>elementIndex</replace>
+      <replace>Jakobian</replace>
+      <replace>Double.parseDouble</replace>
+      <replace>inputMatrix</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/mes/pola/Node.java" />
+        <option value="$PROJECT_DIR$/src/mes/pola/Element.java" />
+        <option value="$PROJECT_DIR$/src/mes/pola/Grid.java" />
+        <option value="$PROJECT_DIR$/src/mes/pola/Local2D.java" />
+        <option value="$PROJECT_DIR$/src/mes/pola/Jacobian.java" />
+        <option value="$PROJECT_DIR$/src/mes/pola/MatrixH.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Local2D.java" />
+        <option value="$PROJECT_DIR$/src/mes/data/dane.txt" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Fourier.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/temperatureIteration.java" />
+        <option value="$PROJECT_DIR$/src/mes/data/dane2.txt" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Macierz.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Node.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/TemperatureIteration.java" />
+        <option value="$PROJECT_DIR$/src/mes/mainApp.java" />
+        <option value="$PROJECT_DIR$/src/mes/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/GlobalData.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Jacobian.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/MatrixC.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/MatrixH.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Grid.java" />
+        <option value="$PROJECT_DIR$/src/mes/funkcje/Element.java" />
+        <option value="$USER_HOME$/Downloads/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="475" />
+    <option name="y" value="-25" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MES2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MES2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MES2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MES2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MES2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MES2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MES2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MES2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mes" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MES2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MES2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mes" type="462c0819:PsiDirectoryNode" />
+              <item name="funkcje" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/AGH/Portfolio/Java - College/MES2018/src/mes/mainApp.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Main.java" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mes.pola" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\AGH\Portfolio\Java - College\MES2018\src\mes\data" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MainApp">
+    <configuration name="Jacobian" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mes.funkcje.Jacobian" />
+      <module name="MES2018" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mes.funkcje.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mes.MainApp" />
+      <module name="MES2018" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mes.MainApp" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="MatrixH" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mes.funkcje.MatrixH" />
+      <module name="MES2018" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mes.funkcje.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainApp" />
+      <item itemvalue="Application.MatrixH" />
+      <item itemvalue="Application.Jacobian" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.Jacobian" />
+        <item itemvalue="Application.MatrixH" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="775e2681-7cf4-45c8-8bd2-f5fba7e86955" name="Default" comment="" />
+      <created>1542555016405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542555016405</updated>
+      <workItem from="1542555019369" duration="14101000" />
+      <workItem from="1542606247089" duration="14000" />
+      <workItem from="1542606293933" duration="9213000" />
+      <workItem from="1542658701233" duration="4702000" />
+      <workItem from="1542697977914" duration="49715000" />
+      <workItem from="1543570391503" duration="941000" />
+      <workItem from="1544280639682" duration="41587000" />
+      <workItem from="1544438582857" duration="2086000" />
+      <workItem from="1544460502929" duration="10969000" />
+      <workItem from="1544514213209" duration="35182000" />
+      <workItem from="1544602842160" duration="87879000" />
+      <workItem from="1545211531921" duration="3534000" />
+      <workItem from="1545335255119" duration="205000" />
+      <workItem from="1546540474609" duration="319000" />
+      <workItem from="1547022348209" duration="6242000" />
+      <workItem from="1547620856144" duration="1333000" />
+      <workItem from="1551643514588" duration="216000" />
+    </task>
+    <task id="LOCAL-00001" summary="Altered local final variables to variables from globalData (there where file loading happens)">
+      <created>1544470043790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544470043790</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Altered local final variables to variables from globalData (there where file loading happens)">
+      <created>1544470333254</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544470333254</updated>
+    </task>
+    <task id="LOCAL-00003" summary="I have fixed some code and added vector load">
+      <created>1544561649134</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544561649134</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Minor changes + new class for temperature calculation">
+      <created>1544684705567</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544684705567</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Load vector aggregation">
+      <created>1544730900346</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544730900346</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fem equation">
+      <created>1544749623497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544749623497</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fem equation">
+      <created>1544749691580</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544749691580</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Final FEM program.&#10;Not refractored yet.">
+      <created>1544774205542</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1544774205542</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fem project:&#10;- calculating properly&#10;- refractoring has yet to be done">
+      <created>1544802181364</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1544802181365</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactoring and reduction of code">
+      <created>1545219618654</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1545219618654</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="268238000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4908854" weight="0.45793104" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2981771" side_tool="true" weight="0.29931036" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.70182294" weight="0.34206897" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16015625" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43172413" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Altered local final variables to variables from globalData (there where file loading happens)" />
+    <MESSAGE value="I have fixed some code and added vector load" />
+    <MESSAGE value="Minor changes + new class for temperature calculation" />
+    <MESSAGE value="Load vector aggregation" />
+    <MESSAGE value="Fem equation" />
+    <MESSAGE value="Final FEM program.&#10;Not refractored yet." />
+    <MESSAGE value="Fem project:&#10;- calculating properly&#10;- refractoring has yet to be done" />
+    <MESSAGE value="Refactoring and reduction of code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring and reduction of code" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="40" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>k=15</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>k=3</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/GlobalData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/data/dane.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3706">
+          <caret line="218" column="8" selection-start-line="218" selection-start-column="8" selection-end-line="218" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/GlobalData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="182" selection-start-line="56" selection-start-column="182" selection-end-line="56" selection-end-column="182" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/data/dane.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="187" selection-start-line="26" selection-start-column="187" selection-end-line="26" selection-end-column="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="187" selection-start-line="26" selection-start-column="187" selection-end-line="26" selection-end-column="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="115" column="4" lean-forward="true" selection-start-line="115" selection-start-column="4" selection-end-line="125" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Local2D.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2827">
+          <caret line="144" column="12" selection-start-line="144" selection-start-column="12" selection-end-line="144" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="888" selection-start-line="888" selection-end-line="888" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MES2018.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="uml://JAVA/mes.funkcje">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>mes.funkcje</OriginalElement>
+          <nodes>
+            <node x="227.4834104938272" y="268.0">mes.funkcje.MatrixC</node>
+            <node x="372.23341049382714" y="139.0">mes.funkcje.GlobalData</node>
+            <node x="445.48341049382714" y="268.0">mes.funkcje.TemperatureIteration</node>
+            <node x="185.18132716049382" y="0.0">mes.funkcje.Local2D</node>
+            <node x="137.4834104938272" y="268.0">mes.funkcje.Grid</node>
+            <node x="335.48341049382714" y="268.0">mes.funkcje.MatrixH</node>
+            <node x="22.86882716049385" y="268.0">mes.funkcje.Jacobian</node>
+            <node x="177.3885030864198" y="139.0">mes.funkcje.Element</node>
+            <node x="88.18132716049384" y="0.0">mes.funkcje.Node</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="mes.funkcje.TemperatureIteration" target="mes.funkcje.GlobalData">
+              <point x="-40.0" y="-14.5" />
+              <point x="485.48341049382714" y="248.0" />
+              <point x="453.23341049382714" y="248.0" />
+              <point x="27.0" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixH" target="mes.funkcje.Element">
+              <point x="-36.0" y="-14.5" />
+              <point x="344.48341049382714" y="208.0" />
+              <point x="253.22183641975317" y="208.0" />
+              <point x="30.33333333333337" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.Jacobian" target="mes.funkcje.Local2D">
+              <point x="5.875" y="-14.5" />
+              <point x="75.74382716049385" y="248.0" />
+              <point x="74.61882716049384" y="248.0" />
+              <point x="74.61882716049384" y="109.0" />
+              <point x="204.68132716049382" y="109.0" />
+              <point x="-26.0" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixC" target="mes.funkcje.Element">
+              <point x="-11.0" y="-14.5" />
+              <point x="260.4834104938272" y="238.0" />
+              <point x="243.11072530864203" y="238.0" />
+              <point x="20.22222222222223" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixH" target="mes.funkcje.Local2D">
+              <point x="0.0" y="-14.5" />
+              <point x="380.48341049382714" y="188.0" />
+              <point x="351.778163580247" y="188.0" />
+              <point x="351.778163580247" y="119.0" />
+              <point x="269.6813271604938" y="119.0" />
+              <point x="39.0" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.Element" target="mes.funkcje.Node">
+              <point x="-7.583333333333314" y="-14.5" />
+              <point x="215.3051697530865" y="49.0" />
+              <point x="160.36882716049388" y="49.0" />
+              <point x="33.68750000000006" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.Grid" target="mes.funkcje.Node">
+              <point x="-14.0" y="-14.5" />
+              <point x="158.4834104938272" y="188.0" />
+              <point x="148.40625" y="188.0" />
+              <point x="148.40625" y="79.0" />
+              <point x="131.49382716049382" y="79.0" />
+              <point x="4.8125" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.Grid" target="mes.funkcje.Element">
+              <point x="28.0" y="-14.5" />
+              <point x="200.4834104938272" y="248.0" />
+              <point x="222.8885030864198" y="248.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.Element" target="mes.funkcje.Local2D">
+              <point x="7.583333333333314" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixC" target="mes.funkcje.GlobalData">
+              <point x="11.0" y="-14.5" />
+              <point x="282.4834104938272" y="218.0" />
+              <point x="381.23341049382714" y="218.0" />
+              <point x="-45.0" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixH" target="mes.funkcje.GlobalData">
+              <point x="18.0" y="-14.5" />
+              <point x="398.48341049382714" y="238.0" />
+              <point x="417.23341049382714" y="238.0" />
+              <point x="-9.0" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.Jacobian" target="mes.funkcje.Node">
+              <point x="-41.125" y="-14.5" />
+              <point x="28.74382716049385" y="248.0" />
+              <point x="14.0" y="248.0" />
+              <point x="14.0" y="69.0" />
+              <point x="92.99382716049384" y="69.0" />
+              <point x="-33.6875" y="14.5" />
+            </edge>
+            <edge source="mes.funkcje.Jacobian" target="mes.funkcje.Element">
+              <point x="29.375" y="-14.5" />
+              <point x="99.24382716049385" y="208.0" />
+              <point x="182.44405864197535" y="208.0" />
+              <point x="-40.44444444444446" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-214.0" y="66.0" />
+          <SelectedNodes>
+            <node>mes.funkcje.MatrixC</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/mes">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>mes</OriginalElement>
+          <nodes>
+            <node x="1128.1110119047619" y="545.0">mes.mainApp</node>
+            <node x="471.41994047619045" y="404.0">mes.funkcje.MatrixC</node>
+            <node x="1644.1699404761903" y="213.0">mes.funkcje.GlobalData</node>
+            <node x="1751.4199404761903" y="404.0">mes.funkcje.TemperatureIteration</node>
+            <node x="393.73244047619045" y="11.0">mes.funkcje.Local2D</node>
+            <node x="230.41994047619045" y="404.0">mes.funkcje.Grid</node>
+            <node x="1153.4199404761905" y="404.0">mes.funkcje.MatrixH</node>
+            <node x="7.419940476190504" y="404.0">mes.funkcje.Jacobian</node>
+            <node x="455.7684523809523" y="213.0">mes.funkcje.Element</node>
+            <node x="71.7324404761905" y="0.0">mes.funkcje.Node</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="mes.mainApp" target="mes.funkcje.MatrixH">
+              <point x="12.0" y="-14.5" />
+              <point x="1188.1110119047619" y="485.0" />
+              <point x="1586.1699404761905" y="485.0" />
+              <point x="144.25" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.TemperatureIteration" target="mes.funkcje.GlobalData">
+              <point x="107.75" y="-25.5" />
+              <point x="2074.6699404761903" y="374.0" />
+              <point x="1783.9199404761903" y="374.0" />
+              <point x="53.75" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixH" target="mes.funkcje.Element">
+              <point x="-230.79999999999995" y="-25.5" />
+              <point x="1211.1199404761905" y="344.0" />
+              <point x="628.2684523809523" y="344.0" />
+              <point x="69.0" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.Jacobian" target="mes.funkcje.Local2D">
+              <point x="-12.6875" y="-25.5" />
+              <point x="96.2324404761905" y="294.0" />
+              <point x="194.25119047619046" y="294.0" />
+              <point x="194.25119047619046" y="173.0" />
+              <point x="408.23244047619045" y="173.0" />
+              <point x="-87.0" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixC" target="mes.funkcje.Element">
+              <point x="-248.25" y="-25.5" />
+              <point x="554.1699404761905" y="384.0" />
+              <point x="582.2684523809523" y="384.0" />
+              <point x="23.0" y="25.5" />
+            </edge>
+            <edge source="mes.mainApp" target="mes.funkcje.GlobalData">
+              <point x="44.0" y="-14.5" />
+              <point x="1220.1110119047619" y="525.0" />
+              <point x="2192.9199404761903" y="525.0" />
+              <point x="2192.9199404761903" y="364.0" />
+              <point x="1805.4199404761903" y="364.0" />
+              <point x="75.24999999999989" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixH" target="mes.funkcje.Local2D">
+              <point x="0.0" y="-25.5" />
+              <point x="1441.9199404761905" y="344.0" />
+              <point x="1370.5625" y="344.0" />
+              <point x="1370.5625" y="93.0" />
+              <point x="582.2324404761905" y="93.0" />
+              <point x="87.0" y="25.5" />
+            </edge>
+            <edge source="mes.mainApp" target="mes.funkcje.Jacobian">
+              <point x="-36.0" y="-14.5" />
+              <point x="1140.1110119047619" y="515.0" />
+              <point x="159.6699404761905" y="515.0" />
+              <point x="50.75" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.Element" target="mes.funkcje.Node">
+              <point x="-86.25" y="-25.5" />
+              <point x="473.0184523809523" y="153.0" />
+              <point x="279.3574404761905" y="153.0" />
+              <point x="56.625" y="36.5" />
+            </edge>
+            <edge source="mes.funkcje.Grid" target="mes.funkcje.Node">
+              <point x="-44.200000000000045" y="-25.5" />
+              <point x="296.7199404761904" y="324.0" />
+              <point x="327.5497023809523" y="324.0" />
+              <point x="327.5497023809523" y="163.0" />
+              <point x="241.6074404761905" y="163.0" />
+              <point x="18.875" y="36.5" />
+            </edge>
+            <edge source="mes.funkcje.Grid" target="mes.funkcje.Element">
+              <point x="88.40000000000009" y="-25.5" />
+              <point x="429.31994047619054" y="374.0" />
+              <point x="559.2684523809523" y="374.0" />
+              <point x="0.0" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.Element" target="mes.funkcje.Local2D">
+              <point x="51.75" y="-25.5" />
+              <point x="611.0184523809523" y="113.0" />
+              <point x="524.2324404761905" y="113.0" />
+              <point x="29.0" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixC" target="mes.funkcje.GlobalData">
+              <point x="248.25" y="-25.5" />
+              <point x="1050.6699404761905" y="364.0" />
+              <point x="1676.4199404761903" y="364.0" />
+              <point x="-53.75" y="25.5" />
+            </edge>
+            <edge source="mes.mainApp" target="mes.funkcje.TemperatureIteration">
+              <point x="28.0" y="-14.5" />
+              <point x="1204.1110119047619" y="505.0" />
+              <point x="1859.1699404761903" y="505.0" />
+              <point x="-107.75" y="25.5" />
+            </edge>
+            <edge source="mes.mainApp" target="mes.funkcje.Grid">
+              <point x="-20.0" y="-14.5" />
+              <point x="1156.1110119047619" y="495.0" />
+              <point x="396.16994047619045" y="495.0" />
+              <point x="55.25" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.MatrixH" target="mes.funkcje.GlobalData">
+              <point x="115.40000000000009" y="-25.5" />
+              <point x="1557.3199404761906" y="374.0" />
+              <point x="1697.9199404761903" y="374.0" />
+              <point x="-32.25" y="25.5" />
+            </edge>
+            <edge source="mes.funkcje.Jacobian" target="mes.funkcje.Node">
+              <point x="-38.0625" y="-25.5" />
+              <point x="70.8574404761905" y="364.0" />
+              <point x="36.0" y="364.0" />
+              <point x="36.0" y="153.0" />
+              <point x="166.1074404761905" y="153.0" />
+              <point x="-56.625" y="36.5" />
+            </edge>
+            <edge source="mes.funkcje.Jacobian" target="mes.funkcje.Element">
+              <point x="88.8125" y="-25.5" />
+              <point x="197.7324404761905" y="344.0" />
+              <point x="490.2684523809523" y="344.0" />
+              <point x="-69.0" y="25.5" />
+            </edge>
+            <edge source="mes.mainApp" target="mes.funkcje.MatrixC">
+              <point x="-12.0" y="-14.5" />
+              <point x="1164.1110119047619" y="485.0" />
+              <point x="636.9199404761905" y="485.0" />
+              <point x="-165.5" y="25.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9" x="274.0" y="187.0" />
+          <SelectedNodes>
+            <node>mes.mainApp</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Macierz.java" />
+    <entry file="file://$PROJECT_DIR$/src/mes/data/dane2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Local2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Jacobian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/data/dane.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/GlobalData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1058">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-455">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#2674#2675#0" expanded="true" />
+            <element signature="e#2724#2725#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/TemperatureIteration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mes/funkcje/MatrixH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="93" column="49" selection-start-line="93" selection-start-column="49" selection-end-line="93" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Jama-1.0.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MES2018</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Jama-1.0.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

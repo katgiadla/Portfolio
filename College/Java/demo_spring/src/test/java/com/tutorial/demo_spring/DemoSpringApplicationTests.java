@@ -1,4 +1,4 @@
-package com.tchorek.jobofertscollector;
+package com.tutorial.demo_spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,10 +7,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class JobOfertsCollectorApplicationTests {
+public class DemoSpringApplicationTests {
 
     @Test
     public void contextLoads() {
     }
 
 }
+

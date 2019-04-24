@@ -7,32 +7,54 @@ import java.sql.*;
 
 @Data
 @Entity
-@Table(name = "joboferts")
+@Table(name = "jobtable")
 public class Job_Table {
     public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("job-oferts-collector");
+        EntityManager em = emf.createEntityManager();
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/oferts","oferts","");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/oferts", "root", "admin");
             Statement statement = connection.createStatement();
-            statement.executeUpdate("INSERT INTO joboferts(id, title, description, interesting) VALUES (20,'StringFromCode','This record comes from java connection, statement and resultset',TRUE )");
+            em.getTransaction().begin();
 
+            Job_Table job_table = new Job_Table("ddd", "this is funny", true);
+            Localization localization = new Localization();
 
+            //statement.execute();
+            //statement.executeUpdate("INSERT INTO oferty(job_name, description, interesting) VALUES ('StringFromCode','This record comes from java connection, statement and resultset',TRUE )");
+
+            em.persist(job_table);
+            em.persist(localization);
+            //em.flush();
+            em.getTransaction().commit();
+            em.close();
+            emf.close();
+            statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private int job_id;
 
-    @Column(name="title")
+    @OneToOne(mappedBy = "job_table_name", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Localization localization;
+
+    public Localization getLocalization() {
+        return localization;
+    }
+
+    @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY) //MANUAL ID INSERTION
+    @Column(name = "job_id", nullable = false)
+    private int job_id = 5;
+
+    @Column(name = "title", nullable = false)
     private String job_title;
 
-    @Column(name="description")
+    @Column(name = "description", nullable = false)
     private String job_description;
 
-    @Column(name="interesting")
+    @Column(name = "interesting", nullable = false)
     private boolean interesting;
 
     public int getJob_id() {
@@ -64,6 +86,13 @@ public class Job_Table {
     }
 
     public void setInteresting(boolean interesting) {
+        this.interesting = interesting;
+    }
+
+    public Job_Table(int id, String job_title, String job_description, boolean interesting) {
+        this.job_id = id;
+        this.job_title = job_title;
+        this.job_description = job_description;
         this.interesting = interesting;
     }
 

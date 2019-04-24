@@ -9,9 +9,9 @@
 
 <table>
     <tr th:each="website : ${websites}">
-    <form th:action="@{/choice}" method="get">
-        <input type="submit" id="buttonChoice" th:value="${website}"/>
-    </form>
+        <form th:action="@{/choice}" method="get">
+            <input type="submit" id="buttonChoice" th:value="${website}"/>
+        </form>
     </tr>
 </table>
 
