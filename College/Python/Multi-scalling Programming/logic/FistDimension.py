@@ -46,7 +46,7 @@ class FirstDimension:
     def initialize_array(self, width=100):
         tmp_array = []
         for column in range(width):
-            tmp_array.append(Cell(column + 1, False))
+            tmp_array.append(Cell(False))
 
         return tmp_array
 
@@ -55,7 +55,6 @@ class FirstDimension:
                 self.game_array_previous_state[index].is_alive * 1) + 2 ** 0 * (self.game_array_previous_state[
                                                                                     (index + 1) % len(
                                                                                         self.game_array_previous_state)].is_alive * 1)  # previous, current, following
-        # print("previous ",self.game_array_previous_state[index - 1].is_alive, " current ", self.game_array_previous_state[index].is_alive, " following ", self.game_array_previous_state[(index+1)%len(self.game_array_previous_state)].is_alive, " sum ", sum, " result ", sum == any([6, 4, 3, 1]))
         if sum in self.rule_array:  # any(first == c for c in letter) , if "a" in ["a", "b", "c"]:
             return True
         else:
@@ -88,9 +87,6 @@ class FirstDimension:
         #self.print_array()
         #print("\n")
 
-    # def print_array(self, width=100, iterations=100):
-    #     for column in range(width):
-    #         print(self.game_array_previous_state[column], end='')
 
     def return_current_array(self):
         return self.game_array_current_state
