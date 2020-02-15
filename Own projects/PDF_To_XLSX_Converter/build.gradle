@@ -16,6 +16,11 @@ dependencies {
     compile group: 'org.projectlombok', name: 'lombok', version:lombok
     compile group: 'org.apache.poi', name: 'poi-ooxml', version:poi
     compile group: 'org.springframework', name: 'spring-core', version:springCore
+    compile group: 'org.springframework', name: 'spring-boot-starter-logging', version:springCore
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version:log
+}
 
+dependencies {
+    testCompile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version:log
     testCompile group: 'junit', name: 'junit', version:junit
 }

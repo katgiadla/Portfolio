@@ -18,10 +18,12 @@ public class ExcelWriter extends FileCreator {
     private Sheet sheet;
     private Row row;
     private FileOutputStream outputStream;
-    private int rowIndex = 0, columnIndex = 0;
+    private int rowIndex, columnIndex;
 
     public ExcelWriter(String filePath) throws Exception {
         super(String.format("%s.xlsx", filePath));
+        rowIndex = 0;
+        columnIndex = 0;
         workbook = new XSSFWorkbook();
         sheet = workbook.createSheet();
         String[] headers = new String[]{Questions.A.name(), Questions.B.name(), Questions.C.name(), Questions.QUESTION.name()};

@@ -1,14 +1,10 @@
 package tchorek.utils;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.util.LinkedMultiValueMap;
 
-@NoArgsConstructor
-@AllArgsConstructor
 public class QuestionMapper {
-    private final LinkedMultiValueMap<String, String> formatedQuestions;
-    private final TextClassificator textClassificator;
+    private LinkedMultiValueMap<String, String> formatedQuestions;
+    private TextClassificator textClassificator;
     private StringBuilder textContainer;
 
     public QuestionMapper() {
@@ -25,23 +21,20 @@ public class QuestionMapper {
 
         for (String textFragment : pdfText) {
             if (textFragment.isEmpty() || textFragment.length() <= 2) continue;
-            System.out.println(textFragment);
             switch (textClassificator.classificatePdfContent(textFragment)) {
                 case QUESTION:
                     if (key.length() <= 2) {
                         key = textContainer.toString();
                         clearStringBuilderAddAnotherTextFragment(textFragment);
-                    } else addTextToCollection(key, textContainer.toString(), textFragment);
+                        break;
+                    }
+                case B:
+                case C:
+                    addTextToCollection(key, textContainer.toString(), textFragment);
                     break;
                 case A:
                     key = textContainer.toString();
                     clearStringBuilderAddAnotherTextFragment(textFragment);
-                    break;
-                case B:
-                    addTextToCollection(key, textContainer.toString(), textFragment);
-                    break;
-                case C:
-                    addTextToCollection(key, textContainer.toString(), textFragment);
                     break;
                 default:
                     textContainer.append(textFragment);
