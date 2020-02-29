@@ -16,11 +16,17 @@ dependencies {
     compile group: 'org.projectlombok', name: 'lombok', version:lombok
     compile group: 'org.apache.poi', name: 'poi-ooxml', version:poi
     compile group: 'org.springframework', name: 'spring-core', version:springCore
-    compile group: 'org.springframework', name: 'spring-boot-starter-logging', version:springCore
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version:log
+    compile group: 'info.cukes', name: 'cucumber-java', version: cucumber
 }
 
 dependencies {
-    testCompile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version:log
-    testCompile group: 'junit', name: 'junit', version:junit
+    testCompile group: 'info.cukes', name: 'cucumber-junit', version: cucumber
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junit
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junit
+}
+
+test {
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
 }
