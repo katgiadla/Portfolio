@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="180.0" maxWidth="170.0" prefHeight="180.0" prefWidth="170.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="180.0" maxWidth="170.0" prefHeight="180.0" prefWidth="170.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <TextField fx:id="excelNameText" layoutX="14.0" layoutY="32.0" />
+            <Label fx:id="excelNameLabel" layoutX="39.0" layoutY="14.0" prefHeight="18.0" prefWidth="98.0" text="Excel output name" />
+            <Button fx:id="convertButton" layoutX="59.0" layoutY="67.0" mnemonicParsing="false" text="Convert" />
+            <Button fx:id="pdfChooser" layoutX="48.0" layoutY="151.0" mnemonicParsing="false" text="Choose PDF" />
+            <Label fx:id="pdfNameLabel" layoutX="61.0" layoutY="102.0" text="PDF name" />
+            <Label fx:id="pdfInputFileNameLabel" layoutX="65.0" layoutY="126.0" text="filename" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
